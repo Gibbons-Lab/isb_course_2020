@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emperor</title>
+    <!-- core dependencies that are otherwise included via the jupyter notebook -->
+    <script src="./vendor/js/require-2.1.22.min.js"></script>
+    <script src="./vendor/js/jquery-2.1.4.min.js"></script>
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+
+if ($("#emperor-css").length == 0){{
+    $("head").append([
+
+        '<link id="emperor-css" rel="stylesheet" type="text/css" href="./css/emperor.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/jquery-ui.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/slick.grid.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/spectrum.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/chosen.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/jquery.contextMenu.min.css">'
+    ]);
+}}
+</script>
+
+
+    <style>
+      #emperor-notebook-0x9f2390d {
+        height:100vh !important;
+        padding: 0px !important;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='emperor-notebook-0x9f2390d' style="position: relative; width:100%; height:500px;">
+  <div class='loading' style="position: absolute;top: 50%;left: 50%;margin-left: -229px; margin-top: -59px; z-index: 10000;height:118px;width:458px;padding:0px"><img src='./img/emperor.png' alt='Emperor resources missing. Expected them to be found in .'></div>
+</div>
+</div>
+
+<script type="text/javascript">
+// When running in the Jupyter notebook we've encountered version conflicts
+// with some dependencies. So instead of polluting the global require context,
+// we define a new context.
+var emperorRequire = require.config({
+'context': 'emperor',
+// the left side is the module name, and the right side is the path
+// relative to the baseUrl attribute, do NOT include the .js extension
+'paths': {
+  /* jQuery */
+  'jquery': './vendor/js/jquery-2.1.4.min',
+  'jqueryui': './vendor/js/jquery-ui.min',
+  'jquery_drag': './vendor/js/jquery.event.drag-2.2.min',
+
+  /* jQuery plugins */
+  'chosen': './vendor/js/chosen.jquery.min',
+  'spectrum': './vendor/js/spectrum.min',
+  'position': './vendor/js/jquery.ui.position.min',
+  'contextmenu': './vendor/js/jquery.contextMenu.min',
+
+  /* other libraries */
+  'underscore': './vendor/js/underscore-min',
+  'chroma': './vendor/js/chroma.min',
+  'filesaver': './vendor/js/FileSaver.min',
+  'blob': './vendor/js/Blob',
+  'canvastoblob': './vendor/js/canvas-toBlob',
+  'd3': './vendor/js/d3.min',
+
+  /* THREE.js and plugins */
+  'three': './vendor/js/three.min',
+  'orbitcontrols': './vendor/js/three.js-plugins/OrbitControls',
+  'projector': './vendor/js/three.js-plugins/Projector',
+  'svgrenderer': './vendor/js/three.js-plugins/SVGRenderer',
+  'canvasrenderer': './vendor/js/three.js-plugins/CanvasRenderer',
+
+  /* SlickGrid */
+  'slickcore': './vendor/js/slick.core.min',
+  'slickgrid': './vendor/js/slick.grid.min',
+  'slickformatters': './vendor/js/slick.editors.min',
+  'slickeditors': './vendor/js/slick.formatters.min',
+
+  /* Emperor's objects */
+  'util': './js/util',
+  'model': './js/model',
+  'view': './js/view',
+  'controller': './js/controller',
+  'draw': './js/draw',
+  'scene3d': './js/sceneplotview3d',
+  'shapes': './js/shapes',
+  'animationdirector': './js/animate',
+  'trajectory': './js/trajectory',
+
+  /* controllers */
+  'abcviewcontroller': './js/abc-view-controller',
+  'viewcontroller': './js/view-controller',
+  'colorviewcontroller': './js/color-view-controller',
+  'visibilitycontroller': './js/visibility-controller',
+  'opacityviewcontroller': './js/opacity-view-controller',
+  'scaleviewcontroller': './js/scale-view-controller',
+  'shapecontroller': './js/shape-controller',
+  'axescontroller': './js/axes-controller',
+  'animationscontroller': './js/animations-controller',
+
+  /* editors */
+  'shape-editor': './js/shape-editor',
+  'color-editor': './js/color-editor',
+  'scale-editor': './js/scale-editor'
+
+},
+/*
+   Libraries that are not AMD compatible need shim to declare their
+   dependencies.
+ */
+'shim': {
+  'jquery_drag': {
+    'deps': ['jquery', 'jqueryui']
+  },
+  'chosen': {
+    'deps': ['jquery'],
+    'exports': 'jQuery.fn.chosen'
+  },
+  'contextmenu' : {
+    'deps': ['jquery', 'jqueryui', 'position']
+  },
+  'filesaver' : {
+    'deps': ['blob']
+  },
+  'canvastoblob' : {
+    'deps': ['blob']
+  },
+  'slickcore': ['jqueryui'],
+  'slickgrid': ['slickcore', 'jquery_drag', 'slickformatters', 'slickeditors']
+}
+});
+
+emperorRequire(
+["jquery", "model", "controller"],
+function($, model, EmperorController) {
+  var DecompositionModel = model.DecompositionModel;
+
+  var div = $('#emperor-notebook-0x9f2390d');
+
+  var data = {"plot": {"decomposition": {"axes_names": [0, 1, 2, 3, 4], "ci": null, "coordinates": [[-0.4049071283293585, -0.005949576132244144, 0.11021091964926977, 0.03619892353162236, 0.16921465770140875], [-0.2839925252417475, 0.4061614049832593, -0.4365154084651558, -0.09400758990436678, 0.01043208564477389], [0.2956073064720646, 0.05794894427547394, 0.10634739181474678, 0.14225287602017256, -0.10348288799474126], [0.22456683419155912, 0.12167645571378556, -0.18865761765790728, 0.022849364993504696, -0.2534450659070765], [-0.4697413423699086, -0.21168533936986364, 0.3757260938369693, -0.06044123818099216, -0.33498503163862525], [-0.7411839963624863, 0.13965595039874282, -0.43439156090250997, -0.08426075082079687, -0.28873431096560387], [0.09991663069545714, -1.0, -0.507367627052264, 0.06322841323893645, 0.07279017288007257], [0.3494137870465247, -0.14368948874074222, 0.09929877101368802, -0.24488208211398013, -0.14936191422263423], [-0.16791272405290913, 0.07366935178927246, -0.12289994082672336, -0.03219500484577224, 0.21174982756167854], [0.16091477760390638, 0.04289096360171172, -0.07822938288530955, 0.11627094696676704, 0.2673355195308005], [0.3711800937298444, -0.06693752510776736, 0.06272359049624944, 0.1737230365076604, -0.1057907339028277], [0.12117397561667383, 0.060312581546343946, 0.06264999938590833, 0.12315908102287985, 0.026746856952907502], [0.20590209310039978, 0.006729722339081983, 0.09347743051647625, -0.2077937077845288, 0.2590808442767951], [-0.6917491002851126, -0.276053543550402, 0.23074698732674198, 0.20292279761084775, 0.013656397526663039], [0.3655636939015442, -0.042158889862387555, 0.08236479178618669, 0.25350033170650327, -0.06934834037007771], [-0.5638211354570236, -0.14421787659858995, 0.038910397275138786, -0.007492533830237321, -0.017751714622659044], [0.26925746009794577, 0.01273575572842689, 0.03873592485709664, -0.14611493836021153, -0.02538688483320639], [-0.1797113437235327, 0.3158063020467998, -0.0028140346308345547, 0.07348109024810145, 0.10284030469755184], [0.24461216624077894, 0.02897768576939768, 0.014829668977586054, -0.31182358447287317, 0.09068698224612878], [0.2588679965187114, -0.013107091154826847, 0.007247792754802293, 0.013585651191876255, 0.08254192220311221], [0.19731315777267758, 0.09412512356297723, -0.11336176141610323, 0.038450297523189, 0.13679092260845704], [0.4106931125723354, 0.034359685912768265, 0.01009856436545473, 0.1031611546968848, -0.19094640675543934], [-0.3131653783821062, 0.068733256851611, 0.02335820117616684, 0.0113420375181861, 0.13989547233052663], [0.1618207442797058, 0.12207402770605208, 0.15002760455955327, -0.21041342402954247, -0.16518959786350215], [0.21518348159266368, 0.16577490084617078, 0.04453697478349581, 0.2184719259715082, -0.026047259877879255], [0.5473350417843669, -0.04637543357381506, 0.1257548689436649, -0.29285873534864726, 0.04984258851353453], [-0.25611342306950813, -0.15437378108901062, 0.10762576210121758, -0.34817763110536076, 0.07027870255493208], [-0.6224865772230309, -0.03547741809872251, 0.3165483597097048, 0.1256539910606166, 0.0613887490099734], [-0.40284966633013014, 0.23791974590384654, -0.2613584020266242, 0.05938086389116032, 0.023594305725179045], [0.47925927564607684, 0.059631833138019716, 0.086165167109604, 0.27392124231491205, 0.0865316257947827], [0.36062578186381383, 0.03895294244051868, -0.21632057791447368, 0.028499237686671078, -0.15967302292000085], [-0.2415730699001955, 0.051889328724112935, 0.1745310513381858, -0.03959204290469204, 0.014745234114991294]], "edges": [], "percents_explained": [36.37575369500527, 13.472731769975283, 10.455076666114783, 6.986837494436757, 5.790600383775119], "sample_ids": ["Cancer1", "Cancer2", "Cancer3", "Cancer4", "Cancer5", "Cancer6", "Cancer7", "Cancer8", "Healthy1", "Healthy2", "Healthy3", "Healthy4", "Healthy5", "Healthy6", "Healthy7", "Healthy8", "SRR2143521", "SRR2143523", "SRR2143524", "SRR2143526", "SRR2143527", "SRR2143533", "SRR2143534", "SRR2143537", "SRR2143552", "SRR2143555", "SRR2143557", "SRR2143599", "SRR2143606", "SRR2143621", "SRR2143627", "SRR2143633"]}, "metadata": [["Cancer1", "9.0", "2.0", "V4", "70.0", "male", "167.0", "65.0", "cancer", "case"], ["Cancer2", "10.0", "2.0", "V4", "59.0", "male", "175.0", "88.0", "cancer", "case"], ["Cancer3", "11.0", "2.0", "V4", "69.0", "male", "185.0", "95.0", "cancer", "case"], ["Cancer4", "12.0", "2.0", "V4", "88.0", "male", "185.0", "90.0", "cancer", "case"], ["Cancer5", "13.0", "2.0", "V4", "37.0", "male", "177.0", "110.0", "cancer", "case"], ["Cancer6", "14.0", "2.0", "V4", "69.0", "male", "180.0", "85.0", "cancer", "case"], ["Cancer7", "15.0", "2.0", "V4", "74.0", "female", "157.0", "79.0", "cancer", "case"], ["Cancer8", "16.0", "2.0", "V4", "56.0", "male", "175.0", "100.0", "cancer", "case"], ["Healthy1", "9.0", "2.0", "V4", "65.0", "female", "167.0", "60.0", "healthy", "control"], ["Healthy2", "10.0", "2.0", "V4", "69.0", "female", "157.0", "46.0", "healthy", "control"], ["Healthy3", "11.0", "2.0", "V4", "54.0", "male", "177.0", "99.0", "healthy", "control"], ["Healthy4", "12.0", "2.0", "V4", "44.0", "female", "152.0", "60.0", "healthy", "control"], ["Healthy5", "13.0", "2.0", "V4", "52.0", "female", "165.0", "56.0", "healthy", "control"], ["Healthy6", "14.0", "2.0", "V4", "75.0", "male", "170.0", "73.0", "healthy", "control"], ["Healthy7", "15.0", "2.0", "V4", "52.0", "male", "162.0", "65.0", "healthy", "control"], ["Healthy8", "16.0", "2.0", "V4", "65.0", "male", "182.0", "88.0", "healthy", "control"], ["SRR2143521", "1.0", "1.0", "V4", "44.0", "female", "170.0", "72.0", "healthy", "control"], ["SRR2143523", "1.0", "1.0", "V4", "78.0", "male", "172.0", "78.0", "cancer", "case"], ["SRR2143524", "2.0", "1.0", "V4", "59.0", "male", "177.0", "65.0", "healthy", "control"], ["SRR2143526", "2.0", "1.0", "V4", "67.0", "male", "167.0", "58.0", "cancer", "case"], ["SRR2143527", "3.0", "1.0", "V4", "65.0", "female", "167.0", "60.0", "healthy", "control"], ["SRR2143533", "3.0", "1.0", "V4", "88.0", "female", "166.0", "63.0", "cancer", "case"], ["SRR2143534", "4.0", "1.0", "V4", "56.0", "female", "158.0", "80.0", "healthy", "control"], ["SRR2143537", "5.0", "1.0", "V4", "59.0", "female", "167.0", "72.0", "healthy", "control"], ["SRR2143552", "6.0", "1.0", "V4", "39.0", "female", "162.0", "61.0", "healthy", "control"], ["SRR2143555", "7.0", "1.0", "V4", "32.0", "female", "170.0", "102.0", "healthy", "control"], ["SRR2143557", "8.0", "1.0", "V4", "42.0", "male", "167.0", "76.0", "healthy", "control"], ["SRR2143599", "4.0", "1.0", "V4", "78.0", "female", "154.0", "60.0", "cancer", "case"], ["SRR2143606", "5.0", "1.0", "V4", "45.0", "male", "185.0", "102.0", "cancer", "case"], ["SRR2143621", "6.0", "1.0", "V4", "72.0", "male", "167.0", "68.0", "cancer", "case"], ["SRR2143627", "7.0", "1.0", "V4", "54.0", "male", "182.0", "90.0", "cancer", "case"], ["SRR2143633", "8.0", "1.0", "V4", "60.0", "female", "155.0", "56.0", "cancer", "case"]], "metadata_headers": ["SampleID", "injection_order", "lane", "fragment", "age", "sex", "height", "weight", "status", "group"], "settings": {}, "type": "scatter"}};
+
+  var plot, biplot = null, ec;
+
+  function init() {
+    // Initialize the DecompositionModel for the scatter plot, and optionally
+    // add one for the biplot arrows
+    plot = new DecompositionModel(data.plot.decomposition,
+                                  data.plot.metadata_headers,
+                                  data.plot.metadata,
+                                  data.plot.type);
+
+    if (data.biplot) {
+      biplot = new DecompositionModel(data.biplot.decomposition,
+                                      data.biplot.metadata_headers,
+                                      data.biplot.metadata,
+                                      data.biplot.type);
+    }
+
+    ec = new EmperorController(plot, biplot, "emperor-notebook-0x9f2390d");
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    ec.render();
+  }
+  $(window).resize(function() {
+    ec.resize(div.innerWidth(), div.innerHeight());
+  });
+
+  $(function(){
+    init();
+    animate();
+
+    ec.ready = function () {
+      // any other code that needs to be executed when emperor is loaded should
+      // go here
+      ec.loadConfig(data.plot.settings);
+    }
+  });
+
+}); // END REQUIRE.JS block
+</script>
+  </body>
+</html>

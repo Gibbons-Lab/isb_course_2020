@@ -1,0 +1,189 @@
+execution:
+    uuid: b16e4aaa-a214-4e0b-a4b4-f208bece53b2
+    runtime:
+        start: 2018-06-21T19:20:54.410947-07:00
+        end: 2018-06-21T19:28:50.739909-07:00
+        duration: 7 minutes, 56 seconds, and 328962 microseconds
+
+action:
+    type: method
+    plugin: !ref 'environment:plugins:feature-classifier'
+    action: fit_classifier_naive_bayes
+    inputs:
+    -   reference_reads: 221e6e35-1eb0-4b96-a665-5e5ea5f8bd7a
+    -   reference_taxonomy: 3b1c6c2e-1365-4fc2-b746-9b6f738b560e
+    -   class_weight: null
+    parameters:
+    -   classify__alpha: 0.001
+    -   classify__chunk_size: 20000
+    -   classify__class_prior: 'null'
+    -   classify__fit_prior: false
+    -   feat_ext__alternate_sign: false
+    -   feat_ext__analyzer: char_wb
+    -   feat_ext__binary: false
+    -   feat_ext__decode_error: strict
+    -   feat_ext__encoding: utf-8
+    -   feat_ext__input: content
+    -   feat_ext__lowercase: true
+    -   feat_ext__n_features: 8192
+    -   feat_ext__ngram_range: '[7, 7]'
+    -   feat_ext__non_negative: false
+    -   feat_ext__norm: l2
+    -   feat_ext__preprocessor: 'null'
+    -   feat_ext__stop_words: 'null'
+    -   feat_ext__strip_accents: 'null'
+    -   feat_ext__token_pattern: (?u)\b\w\w+\b
+    -   feat_ext__tokenizer: 'null'
+    output-name: classifier
+    citations:
+    - !cite 'action|feature-classifier:2018.6.0|method:fit_classifier_naive_bayes|0'
+
+transformers:
+    inputs:
+        reference_reads:
+        -   from: DNASequencesDirectoryFormat
+            to: q2_types.feature_data._transformer:DNAIterator
+            plugin: !ref 'environment:plugins:types'
+        reference_taxonomy:
+        -   from: TSVTaxonomyDirectoryFormat
+            to: pandas.core.series:Series
+            plugin: !ref 'environment:plugins:types'
+            citations:
+            - !cite 'view|types:2018.6.0|pandas.core.series:Series|0'
+    output:
+    -   from: sklearn.pipeline:Pipeline
+        to: TaxonomicClassiferTemporaryPickleDirFmt
+        plugin: !ref 'environment:plugins:feature-classifier'
+
+environment:
+    platform: linux-x86_64
+    python: |-
+        3.5.5 | packaged by conda-forge | (default, Apr  6 2018, 13:41:05)
+        [GCC 4.8.2 20140120 (Red Hat 4.8.2-15)]
+    framework:
+        version: 2018.6.0
+        website: https://qiime2.org
+        citations:
+        - !cite 'framework|qiime2:2018.6.0|0'
+    plugins:
+        types:
+            version: 2018.6.0
+            website: https://github.com/qiime2/q2-types
+        feature-classifier:
+            version: 2018.6.0
+            website: https://github.com/qiime2/q2-feature-classifier
+            citations:
+            - !cite 'plugin|feature-classifier:2018.6.0|0'
+    python-packages:
+        widgetsnbextension: 3.2.1
+        wheel: 0.31.0
+        webencodings: '0.5'
+        wcwidth: 0.1.7
+        urllib3: '1.22'
+        unifrac: 0.9.2
+        traitlets: 4.3.2
+        tornado: 5.0.2
+        testpath: 0.3.1
+        terminado: 0.8.1
+        statsmodels: 0.9.0
+        six: 1.11.0
+        simplegeneric: 0.8.1
+        setuptools: 39.2.0
+        Send2Trash: 1.5.0
+        seaborn: 0.8.1
+        scipy: 0.19.1
+        scikit-learn: 0.19.1
+        scikit-bio: 0.5.1
+        requests: 2.19.1
+        qiime2: 2018.6.0
+        q2templates: 2018.6.0
+        q2cli: 2018.6.0
+        q2-vsearch: 2018.6.0
+        q2-types: 2018.6.0
+        q2-taxa: 2018.6.0
+        q2-sample-classifier: 2018.6.0
+        q2-quality-filter: 2018.6.0
+        q2-quality-control: 2018.6.0
+        q2-phylogeny: 2018.6.0
+        q2-metadata: 2018.6.0
+        q2-longitudinal: 2018.6.0
+        q2-gneiss: 2018.6.0
+        q2-feature-table: 2018.6.0
+        q2-feature-classifier: 2018.6.0
+        q2-emperor: 2018.6.0
+        q2-diversity: 2018.6.0
+        q2-demux: 2018.6.0
+        q2-deblur: 2018.6.0
+        q2-dada2: 2018.6.0
+        q2-cutadapt: 2018.6.0
+        q2-composition: 2018.6.0
+        q2-alignment: 2018.6.0
+        pyzmq: 17.0.0
+        PyYAML: '3.12'
+        pytz: '2018.4'
+        python-dateutil: 2.7.3
+        PySocks: 1.6.8
+        pyparsing: 2.2.0
+        pyOpenSSL: 18.0.0
+        Pygments: 2.2.0
+        pycparser: '2.18'
+        ptyprocess: 0.5.2
+        psutil: 5.4.6
+        prompt-toolkit: 1.0.15
+        pip: 9.0.3
+        pickleshare: 0.7.4
+        pexpect: 4.6.0
+        patsy: 0.5.0
+        parso: 0.2.1
+        pandocfilters: 1.4.2
+        pandas: 0.23.1
+        packaging: '17.1'
+        numpy: 1.12.1
+        notebook: 5.5.0
+        nose: 1.3.7
+        nbformat: 4.4.0
+        nbconvert: 5.3.1
+        natsort: 5.3.2
+        msgpack: 0.5.6
+        mistune: 0.8.3
+        matplotlib: 2.2.2
+        MarkupSafe: '1.0'
+        lockfile: 0.12.2
+        kiwisolver: 1.0.1
+        jupyter-core: 4.4.0
+        jupyter-client: 5.2.3
+        jsonschema: 2.6.0
+        Jinja2: '2.10'
+        jedi: 0.12.0
+        ipywidgets: 7.2.1
+        ipython: 6.4.0
+        ipython-genutils: 0.2.0
+        ipykernel: 4.8.2
+        idna: '2.7'
+        html5lib: 1.0.1
+        h5py: 2.7.0
+        future: 0.16.0
+        fastcluster: 1.1.25
+        entrypoints: 0.2.3
+        emperor: 1.0.0b16
+        decorator: 4.3.0
+        deblur: 1.0.4
+        Cython: 0.28.3
+        cutadapt: '1.16'
+        cryptography: 2.2.1
+        click: '6.7'
+        chardet: 3.0.4
+        cffi: 1.11.5
+        certifi: 2018.4.16
+        CacheControl: 0.12.4
+        bokeh: 0.12.16
+        bleach: 2.1.3
+        bibtexparser: 1.0.1
+        backcall: 0.1.0
+        asn1crypto: 0.24.0
+        biom-format: 2.1.6
+        cycler: 0.10.0
+        gneiss: 0.4.4
+        ijson: '2.3'
+        tzlocal: '1.3'
+        xopen: 0.3.2
