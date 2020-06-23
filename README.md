@@ -1,15 +1,38 @@
-![GitHub release](https://img.shields.io/github/tag/Gibbons-Lab/ccmb_workshop.svg)
-![Qiime 2 version](https://img.shields.io/badge/Qiime%202%20version-2018.11-blue.svg)
-[![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://gibbons-lab.github.io/ccmb_workshop)
+![GitHub release](https://img.shields.io/github/tag/Gibbons-Lab/isb_course_2020.svg)
+![Qiime 2 version](https://img.shields.io/badge/Qiime%202%20version-2020.2-blue.svg)
+[![part 1](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://gibbons-lab.github.io/isb_course_2020/16S)
+[![part 2](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://gibbons-lab.github.io/isb_course_2020/micom)
 
-# Data and Materials for CCMB workshop 2018
+
+# Data and Materials for the ISB microbiome course
+
+## Output
+
+All output generated during the walkthrough can be found in the
+[treasure chest](treasure_chest). The easiest way to get all of that
+is to [download the entire repository](https://github.com/Gibbons-Lab/isb_course_2020/archive/master.zip).
+
+## Part 1: Amplicon Sequencing Analysis
 
 You can see the actual workshop walkthrough at
-https://gibbons-lab.github.io/ccmb_workshop. Press `?` to get a list
+https://gibbons-lab.github.io/isb_course_2020/16S. Press `?` to get a list
 of available live options such as slide overviews and speaker mode. Note that
 some slides are grouped vertically, you can navigate the presentation using
 the directional buttons on your keyboard.
-A [PDF version](workshop.pdf) (lacks the output previews) is also available.
+A [PDF version](part1.pdf) (lacks the output previews) is also available.
+
+
+## Part 2: Metagenome-scale Modeling with MICOM
+
+You can see the actual workshop walkthrough at
+https://gibbons-lab.github.io/isb_course_2020/micom. Press `?` to get a list
+of available live options such as slide overviews and speaker mode. Note that
+some slides are grouped vertically, you can navigate the presentation using
+the directional buttons on your keyboard.
+A [PDF version](part2.pdf) (lacks the output previews) is also available.
+
+
+# For teachers
 
 ## Use case
 
@@ -26,12 +49,6 @@ systems though :point_up:
 In order to minimize the need to transfer files between a server and the local
 machine all output is pre-generated and the visualizations are included directly
 in the presentation.
-
-## Output
-
-All output generated during the walkthrough can be found in the
-[treasure chest](treasure_chest). The easiest way to get all of that
-is to [download the entire repository](https://github.com/Gibbons-Lab/ccmb_workshop/archive/master.zip).
 
 ## Technicalities
 
@@ -61,24 +78,5 @@ append `?print-pdf` to the address. For instance if you ran it locally as
 described above open `localhost:8000?print-pdf` in the browser. Then choose
 print to PDF with the browser (choose margins: none).
 
-### Reproducibility
-
-In order to ensure all commands in the presentation actually run there is a
-[pytest](https://pytest.org/) setup that does the following things:
-
-1. Extract all commands marked as bash or python and builds up a shell file
-   running them all ([commands.sh](./commands.sh). Other languages are ignored,
-   so you can use this to include optional or do-not-run commands.
-2. Runs all commands individually in pytest and reports eventual errors.
-
-To run the pytest setup you need pytest installed (available on conda or pip)
-and call:
-
-```bash
-py.test test_commands.py
-```
-
-So in essence it should be enough to add new commands to the markdown file and
-run the tests in order to verify that everything works as expected.
 
 
