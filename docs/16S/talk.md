@@ -1,6 +1,6 @@
 <!-- .slide: data-background="assets/isb/data-midnight.jpg" class="dark" -->
 
-# Amplicon Sequence Analysis with Qiime 2
+# Amplicon Sequencing Data Analysis with Qiime 2
 
 ### Christian Diener & Sean M. Gibbons
 
@@ -11,6 +11,41 @@ from the *ISB microbiome course*
 https://gibbons-lab.github.io/isb_course_2020/16S
 
 ---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+# Before we start...
+
+Will be managing 2 resources today.
+
+Logic and explanation will be in the *slides* ("*Why* do we run the analysis?").
+
+Technical aspects and commands can be found in the *colaboratory* notebook ("*How* do we run the analysis?").
+
+---
+
+Open up the presentation and the Google Colab notebook for this session:
+
+- Presentation: https://gibbons-lab.github.io/isb_course_2020/16S
+
+<a href="https://colab.research.google.com/github/gibbons-lab/isb_course_2020/blob/master/16S.ipynb"
+   target="_blank">Click me to open the notebook!</a>
+
+---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+# Intro to Colaboratory and environment setup
+
+Follow the first few steps in the notebook...
+
+We'll continue while that is running.
+
+---
+
+<!-- .slide: data-background="var(--secondary)" class="dark" -->
+
+# what is Qiime?
 
 Created ~2010 during the Human Microbiome Project (2007 - 2016) under leadership
 of Greg Caporaso and Rob Knight.
@@ -29,7 +64,7 @@ analysis package with a focus on data and analysis transparency.
 ## So what is it really?
 
 In its essence Qiime is a set of *commands* to transform microbiome *data* into
-*intermediate* outputs and *visualization*.
+*intermediate* outputs and *visualizations*.
 
 <img src="assets/barplot.gif" width="100%">
 
@@ -52,8 +87,8 @@ Major changes:
 ## Where to find help?
 
 Qiime 2 comes with a lot of help starting from https://qiime2.org such
-as [tutorials](https://docs.qiime2.org/2020.2/tutorials/),
-[general documentation](https://docs.qiime2.org/2020.2/) and a
+as [tutorials](https://docs.qiime2.org/2020.6/tutorials/),
+[general documentation](https://docs.qiime2.org/2020.6/) and a
 [user forum](https://forum.qiime2.org/) to ask questions.
 
 ---
@@ -82,127 +117,15 @@ meant for human consumption :point_up:.
 
 ---
 
-## The setup
-
-Qiime 2 currently only has native support for Mac and Linux.
-
-It can also be deployed on a server or the [cloud](https://docs.qiime2.org/220.02/install/virtual/aws/).
-
-----
-
-Goal for now: get a working Qiime 2 environment.
-
-There might be some minor set up steps :point_right:
-
----
-
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-# If you use Qiime 2 on a server...
-
-----
-
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-## Windows: Install Putty and WinSCP
-
-----
-
-### Putty
-
-To connect to the server we will need a SSH client. You can download Putty
-at https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-(most likely the 64bit version).
-
-Run the downloaded installer and you are set.
-
-If you open Putty it will ask you for a server address your user
-name and password and will connect you to the server.
-
-----
-
-### WinSCP
-
-`WinSCP` will allow you to transfer files between you computer and the server.
-
-Download it at https://winscp.net/eng/download.php .
-
-After installing and running it will ask you for the same info as before. Choose
-SFTP or SCP as the protocol (default) and provide the server address
-your user and password.
-
-----
-
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-## Mac or Linux: Install nothing :stuck_out_tongue:
-
-But you will need to open a terminal...
-
-----
-
-Type "terminal" in the application menu.
-
-You can connect to the server with
-
-```sh
-ssh user@server
-```
-where `user` is your username and `server` the web address of the server.
-
-You can transfer files using `rsync`
-
-```sh
-rsync user@server:~/file.txt .
-```
-
----
-
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-# If you want to install Qiime 2 on your own equipment?
-
-https://docs.qiime2.org/2020.2/install/
-
-----
-
-## Mac or Linux: use conda
-
-1. Install miniconda -> https://conda.io/miniconda.html
-2. Get the conda environment file for [Mac](https://data.qiime2.org/distro/core/qiime2-2020.2-py36-osx-conda.yml)
-   or [Linux](https://data.qiime2.org/distro/core/qiime2-2020.2-py36-linux-conda.yml)
-3. Set up the Qiime 2 environment and activate it
-
-```sh
-conda env create -n qiime2-2020.2 --file qiime2-2020.2-py35-osx-conda.yml
-source activate qiime2-2020.2
-```
-
-----
-
-## Windows: use docker
-
-No native support but you can run it with Docker (virtual machine alternative).
-
-See https://store.docker.com/editions/community/docker-ce-desktop-windows.
-
-With docker you can get the Qiime 2 container with:
-
-```sh
-docker pull qiime2/core:2020.2
-```
-
-Also see [this forum post](https://forum.qiime2.org/t/issue-with-docker-toolbox-install-mingw-path-conversion/735/2).
-
----
-
 ### Wait... what?
 
 <img src="assets/guide.png" width="30%">
 
 *All* output we generate can be found in the `treasure_chest` folder at
 
-https://github.com/gibbons-lab/ccmb_workshop
+https://github.com/gibbons-lab/isb_course_2020/treasure_chest
+
+or `materials/treasure_chest` in the colaboratory notebook.
 
 ---
 
@@ -227,17 +150,6 @@ https://github.com/gibbons-lab/ccmb_workshop
 
 ---
 
-Start by copying the [course materials](https://github.com/Gibbons-Lab/ccmb_workshop/archive/master.zip)
-to a folder on your machine or the server.
-
-For now we will use the following files:
-
-1. `ubc_data` - directory with the sequencing data
-2. `ubc_manifest.csv` - list of sequencing files
-3. `samples.tsv` - metadata for the samples
-
----
-
 ## Illumina FastQ files (Basespace)
 
 <img src="assets/illumina.png" width="60%">
@@ -258,47 +170,22 @@ do we convert our data to an artifact?
 
 ---
 
-## Activate your Qiime 2 environment :rocket:
-
-```bash
-source activate qiime2-2020.2
-```
-
----
-
-## Our first Qiime 2 command
+## Our first Qiime 2 commands
 
 We can import the data with the `import` action. For that we have to give
 Qiime 2 a *manifest* (list of raw files) and tell it what *type of data* we
 are importing and what *type of artifact* we want.
 
-```bash
-# use `\` to break up long lines
-qiime tools import \
-  --type 'SampleData[SequencesWithQuality]' \
-  --input-path ubc_manifest.csv \
-  --output-path ubc_data.qza \
-  --input-format SingleEndFastqManifestPhred33
-```
-
----
-
-Since we have quality information for the sequencing reads, let's also generate
-our first visualization by inspecting those:
-
-```bash
-qiime demux summarize --i-data ubc_data.qza --o-visualization qualities.qzv
-```
-
-Copy the file to your local machine.
+:computer: let's jump back to the open colaboratory notebook...
 
 ---
 
 ## View a Qiime 2 visualization
 
-https://view.qiime2.org
+There are two ways to look at a Qiime 2 visualization:
 
-Have a <a href="data/qualities/data" target="_blank">:bar_chart:look</a> at the qualities.
+- visit https://view.qiime2.org and load the file
+- use `qiime tools view [file.qzv]` if you ahve Qiime 2 installed
 
 :thinking_face: What do you observe across the read? Where would you truncate the reads?
 
@@ -329,27 +216,15 @@ We will now run the DADA2 plugin which will do 3 things:
 3. remove chimeras
 4. count the abundances
 
----
-
-Since it takes a bit let's start the process and use the time to
-understand what is happening:
-
-```bash
-qiime dada2 denoise-single \
-    --i-demultiplexed-seqs ubc_data.qza \
-    --p-trunc-len 220 --p-trim-left 10 \
-    --output-dir dada2 --verbose
-```
-
 Alternatively just pull the pre-computed data with:
 
 ```sh
-cp -r /srv/workshop/treasure_chest/dada2 ~
+cp -r materials/treasure_chest/dada2 ~
 ```
 
 ---
 
-## Identifying alternative sequence variants
+## Identifying alternative sequence variants (ASVs)
 
 <img src="assets/dada2.png" width="80%">
 
