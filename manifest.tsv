@@ -1,4 +1,4 @@
-sample-id	absolute-filepath
+id	absolute-filepath
 ERR1883212	$PWD/data/ERR1883212.fastq.gz
 ERR1883214	$PWD/data/ERR1883214.fastq.gz
 ERR1883247	$PWD/data/ERR1883247.fastq.gz
