@@ -1,0 +1,4 @@
+git+https://github.com/cdiener/optlang@feature/osqp
+git+https://github.com/cdiener/cobrapy@feature/osqp_support
+micom
+osqp
