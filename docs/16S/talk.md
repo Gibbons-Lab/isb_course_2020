@@ -2,7 +2,7 @@
 
 # Amplicon Sequencing Data Analysis with Qiime 2
 
-### Christian Diener & Sean M. Gibbons
+### Christian Diener
 
 <img src="assets/isb/logo.png" width="40%">
 
@@ -14,38 +14,30 @@ https://gibbons-lab.github.io/isb_course_2020/16S
 
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
-# Before we start...
+# Hold your horses :horse:
 
-Will be managing 2 resources today.
+Let's get the slides first (use your computer, phone, TV, fridge, anything with a 16:9 screen)
 
-Logic and explanation will be in the *slides* ("*Why* do we run the analysis?").
-
-Technical aspects and commands can be found in the *colaboratory* notebook ("*How* do we run the analysis?").
+*https://gibbons-lab.github.io/isb_course_2020/16S*
 
 ---
 
-Open up the presentation and the Google Colab notebook for this session:
+# Organization of the course
 
-- Presentation: https://gibbons-lab.github.io/isb_course_2020/16S
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+<img src="assets/materials.png" width="80%">
+
+<br>
 
 <a href="https://colab.research.google.com/github/gibbons-lab/isb_course_2020/blob/master/16S.ipynb"
    target="_blank">Click me to open the notebook!</a>
 
 ---
 
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-# Intro to Colaboratory and environment setup
-
-Follow the first few steps in the notebook...
-
-We'll continue while that is running.
-
----
-
 <!-- .slide: data-background="var(--secondary)" class="dark" -->
 
-# what is Qiime?
+# Qiime
 
 Created ~2010 during the Human Microbiome Project (2007 - 2016) under leadership
 of Greg Caporaso and Rob Knight.
@@ -68,12 +60,12 @@ In its essence Qiime is a set of *commands* to transform microbiome *data* into
 
 <img src="assets/barplot.gif" width="100%">
 
-Its major mode of use is via the *command line*.
+It's commonly used via the *command line*.
 
 ---
 
-*Qiime 2* was introduced 2016 and improves on Qiime 1 based on the experiences
-during the HMP.
+[Qiime 2](https://doi.org/10.1038/s41587-019-0209-9)
+was introduced 2016 and improves on Qiime 1 based on the experiences during the HMP.
 
 Major changes:
 
@@ -81,6 +73,8 @@ Major changes:
 - semantic *type system*
 - extendable *plugin* system
 - multiple *user interfaces* (in progress)
+
+
 
 ---
 
@@ -111,9 +105,34 @@ meant for human consumption :point_up:.
 
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
-# Walkthrough I
+## Analyzing the microbial composition during recurrent <i>C. diff</i> infection
 
-## Analyzing the microbial composition in colorectal cancers
+16S amplicon sequencing data of the V4 region from fecal samples
+
+4 healthy donors and 4 individuals with recurrent infection.
+
+https://doi.org/10.1186/s40168-015-0070-0
+
+---
+
+
+## The <i>C. diff</i> infection cycle
+
+<img src="assets/cycle.png" height="550vh">
+
+<div class="footnote">
+
+courtesy of [Stephanie Swegle](https://see.isbscience.org/steam2019/stephanie-3/)
+
+</div>
+
+---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+# Setup
+
+:computer: Let's switch to the notebook and get started
 
 ---
 
@@ -125,22 +144,7 @@ meant for human consumption :point_up:.
 
 https://github.com/gibbons-lab/isb_course_2020/treasure_chest
 
-or `materials/treasure_chest` in the colaboratory notebook.
-
----
-
-<!-- .slide: data-background="assets/lab.jpg" class="dark" -->
-
-## Our data
-
-16S amplicon sequencing data of the V4 region from fecal samples
-
-16 healthy donors and 16 donors with colorectal cancer (CRC).
-
-2 studies in the data:
-
-- https://doi.org/10.1158/1940-6207.CAPR-14-0129
-- https://doi.org/10.1186/s13073-016-0290-3
+or `materials/treasure_chest` in the Colaboratory notebook.
 
 ---
 
@@ -176,7 +180,7 @@ We can import the data with the `import` action. For that we have to give
 Qiime 2 a *manifest* (list of raw files) and tell it what *type of data* we
 are importing and what *type of artifact* we want.
 
-:computer: let's jump back to the open colaboratory notebook...
+:computer: let's jump back to the open Colaboratory notebook...
 
 ---
 
@@ -185,7 +189,7 @@ are importing and what *type of artifact* we want.
 There are two ways to look at a Qiime 2 visualization:
 
 - visit https://view.qiime2.org and load the file
-- use `qiime tools view [file.qzv]` if you ahve Qiime 2 installed
+- use `qiime tools view [file.qzv]` if you have Qiime 2 installed
 
 :thinking_face: What do you observe across the read? Where would you truncate the reads?
 
@@ -216,12 +220,6 @@ We will now run the DADA2 plugin which will do 3 things:
 3. remove chimeras
 4. count the abundances
 
-Alternatively just pull the pre-computed data with:
-
-```sh
-cp -r materials/treasure_chest/dada2 ~
-```
-
 ---
 
 ## Identifying alternative sequence variants (ASVs)
@@ -236,6 +234,8 @@ Expectation-Maximization (EM) algorithm to find alternative sequence variants
 ## PCR chimeras
 
 <img src="assets/chimera.png" width="60%">
+
+The used primers were F515/R806. How long is the amplified fragment?
 
 ---
 
@@ -254,15 +254,6 @@ might we be interested in?
 One of the basic things we might want to see is how the sequences across
 all samples are related to one another. We are interested in their *phylogeny*.
 
-<br>
-
-We can build a phylogenetic tree for our sequences using the following command:
-
-```bash
-qiime phylogeny align-to-tree-mafft-fasttree \
-    --i-sequences dada2/representative_sequences.qza \
-    --output-dir tree
-```
 
 ---
 
@@ -300,44 +291,14 @@ How different are two or more samples/donors/sites from each other?
 
 - how many taxa are *shared* between samples? → Jaccard index
 - do shared taxa have the *same abundance*? → Bray-Curtis distance
-- do samples share *phylogenetically similar* taxa? → UniFrac, Faith PD
+- do samples share *genetically similar* taxa? → UniFrac, Faith PD
 
 ---
-
-We can create a whole bunch of diversity metrics with Qiime 2 at once.
-
-```bash
-qiime diversity core-metrics-phylogenetic \
-    --i-table dada2/table.qza \
-    --i-phylogeny tree/rooted_tree.qza \
-    --p-sampling-depth 8000 \
-    --m-metadata-file samples.tsv \
-    --output-dir diversity
-```
-
-----
 
 ## Principal Coordinate Analysis
 
 <img src="assets/pcoa.png" width="100%">
 
-<a href="data/weighted_unifrac/data" target="_blank">:bar_chart: See output...</a>
-
----
-
-We can also use the diversity plugin to check if there are differences in
-alpha diversity between groups:
-
-```bash
-qiime diversity alpha-group-significance \
-    --i-alpha-diversity diversity/shannon_vector.qza \
-    --m-metadata-file samples.tsv \
-    --o-visualization diversity/alpha_groups.qzv
-```
-
-<br>
-
-<a href="data/alpha_shannon/data" target="_blank">:bar_chart: See output...</a>
 
 ---
 
@@ -354,6 +315,12 @@ those correspond to.
 
 ---
 
+## Taxonomic ranks
+
+<img src="assets/ranks.png" width="40%">
+
+---
+
 Even though just looking for our sequence in a *database of known genes*
 seems like the best idea that does not work great in practice. Why?
 
@@ -365,143 +332,11 @@ provides better *generalization*.
 
 ---
 
-We will use a classifier trained on the GreenGenes database.
+## Your turn
 
-https://docs.qiime2.org/2020.2/data-resources/
+What is the relationship between particular *taxa* and the disease state?
 
-```bash
-qiime feature-classifier classify-sklearn \
-    --i-reads dada2/representative_sequences.qza \
-    --i-classifier gg-13-8-99-515-806-nb-classifier.qza \
-    --o-classification taxa.qza
-```
-
----
-
-Now let's have a look what and how much of different bacteria we have in
-each sample:
-
-<br>
-
-```bash
-qiime taxa barplot \
-    --i-table dada2/table.qza \
-    --i-taxonomy taxa.qza \
-    --m-metadata-file samples.tsv \
-    --o-visualization taxa_barplot.qzv
-```
-
-<br>
-
-:thinking_face: What do you observe? Can you find things that look interesting in the
-cancer samples?
-
-----
-
-## Phylogenetic ranks
-
-<img src="assets/ranks.png" width="40%">
-
-<br>
-
-<a href="data/barplot/data" target="_blank">:bar_chart: See output...</a>
-
----
-
-<!-- .slide: data-background="var(--secondary)" class="dark" -->
-
-# Walkthrough II
-
-## Differential abundance testing
-
----
-
-In a metagenome analysis differential abundance testing is the use of
-of *statistical tests* to identify *taxa* that are different across
-a *phenotype* of interest (for instance case vs. control).
-
----
-
-## Questions we should ask
-
-1. What *preprocessing/transformation* do I apply to the abundances (biases)?
-2. At which *taxonomy rank* should I test?
-3. What *test* do I use (parametric, non-parametric, Bayesian)
-4. How do I control for *multiple testing*?
-
----
-
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-## Data transformations
-
-Converting abundances to relative abundances (percent) makes the data
-*compositional*, meaning the relative abundance of one taxon depends
-on the others.
-
-> A sample can not have 80% B. fragilis and 50% E. coli at the same time.
-
-Loading the sequencer itself already introduces some compositional effect
-as well (constant amount of DNA).
-
----
-
-*Compositional* data usually violates *independence* assumptions of most
-statistical tests.
-
-There are many strategies to deal with that. Log-ratios work pretty
-well in most cases.
-
----
-
-## Compositional testing in Qiime 2
-
-Qiime 2 has a methods to test in compositional data. [ANCOM](https://www.ncbi.nlm.nih.gov/pubmed/26028277)
-tests with single taxa and [GNEISS](https://msystems.asm.org/content/2/1/e00162-16) tests for balances between several
-taxa.
-
-:thinking_face: But which taxonomy rank should we use?
-
----
-
-## Summarizing feature tables
-
-In Qiime 2 we can summarize a feature table at a particular taxonomy rank
-using the `collapse` method.
-
-```bash
-qiime taxa collapse \
-    --i-table dada2/table.qza \
-    --i-taxonomy taxa.qza \
-    --p-level 6 \
-    --o-collapsed-table genus.qza
-```
-
----
-
-## ANCOM
-
-Qiime 2 has a method that improves testing for compositional data
-called [ANCOM](https://www.ncbi.nlm.nih.gov/pubmed/26028277). It can not
-deal with zero abundances so it needs us to add a *pseudo count* first.
-
-<br>
-
-```bash
-qiime composition add-pseudocount --i-table genus.qza --o-composition-table added_pseudo.qza
-```
-
-```bash
-qiime composition ancom \
-    --i-table added_pseudo.qza \
-    --m-metadata-file samples.tsv \
-    --m-metadata-column status \
-    --o-visualization ancom.qzv
-```
-
-<br>
-
-<a href="data/ancom/data" target="_blank">:bar_chart: See output...</a>
+<img src="assets/coding.gif" width="50%">
 
 ---
 
@@ -510,31 +345,4 @@ qiime composition ancom \
 ### And we are done :clap:
 
 # Thanks!
-
----
-
-# :bike: Too fast? :blue_car:
-
-Here some more questions to investigate.
-
----
-
-Are beta diversity differences explained by the phenotype?
-
-How much variance is explained by healthy vs. disease?
-
-What about batch effects?
-
-https://docs.qiime2.org/2020.2/plugins/available/diversity/beta-group-significance/
-
----
-
-Could you predict if someone had colorectal cancer just from 16S data?
-
-Does pooling studies help here?
-
-https://docs.qiime2.org/2020.2/plugins/available/sample-classifier/classify-samples/
-
-
-
 
