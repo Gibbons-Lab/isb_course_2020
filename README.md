@@ -1,5 +1,5 @@
 ![GitHub release](https://img.shields.io/github/tag/Gibbons-Lab/isb_course_2020.svg)
-![Qiime 2 version](https://img.shields.io/badge/Qiime%202%20version-2020.2-blue.svg)
+![Qiime 2 version](https://img.shields.io/badge/Qiime%202%20version-2020.6-blue.svg)
 [![part 1](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part1)](https://gibbons-lab.github.io/isb_course_2020/16S)
 [![part 2](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part2)](https://gibbons-lab.github.io/isb_course_2020/micom)
 
@@ -12,7 +12,7 @@ All output generated during the walkthrough can be found in the
 [treasure chest](treasure_chest). The easiest way to get all of that
 is to [download the entire repository](https://github.com/Gibbons-Lab/isb_course_2020/archive/master.zip).
 
-## Part 1: Amplicon Sequencing Analysis
+## Part 1: Amplicon Sequencing Data Analysis with Qiime 2
 
 You can see the actual workshop walkthrough at
 https://gibbons-lab.github.io/isb_course_2020/16S. Press `?` to get a list
@@ -22,7 +22,7 @@ the directional buttons on your keyboard.
 A [PDF version](part1.pdf) (lacks the output previews) is also available.
 
 
-## Part 2: Metagenome-scale Modeling with MICOM
+## Part 2: Modeling microbiota-wide metabolism with MICOM
 
 You can see the actual workshop walkthrough at
 https://gibbons-lab.github.io/isb_course_2020/micom. Press `?` to get a list
@@ -37,7 +37,7 @@ A [PDF version](part2.pdf) (lacks the output previews) is also available.
 ## Use case
 
 The course is meant to use all equipments available to the students so they
-can be encouraged to open it on their smartphone (landscape mode looks better)
+can be encouraged to open it on their smartphone (landscape mode required)
 while they run commands on the terminal.
 
 It focuses on the command line

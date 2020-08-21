@@ -287,6 +287,7 @@ body {
     min-width: 480px; }
 
 .reveal .footer {
+  font-size: 80%;
   width: auto;
   z-index: 1; }
   .reveal .footer a {
@@ -316,10 +317,6 @@ body {
     background-image: url(../isb/isb_logo_no_text.png);
     background-repeat: no-repeat;
     background-size: 3vw auto; }
-
-@media screen and (max-width: 1024px) {
-  .reveal .sidebar {
-    display: none; } }
 
 .reveal .accent {
   color: #FF5F00; }
@@ -392,3 +389,11 @@ section.has-dark-background, section.dark {
 
 .reveal .slides .pdf-page section {
   left: 6vw !important; }
+
+@media screen and (max-width: 1024px) {
+  .reveal .sidebar {
+    display: none; }
+  .reveal .slides {
+    margin-left: 1vw;
+    margin-right: 1vw; }
+}

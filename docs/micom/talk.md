@@ -6,9 +6,15 @@
 
 <img src="assets/isb/logo.png" width="40%">
 
-from the *ISB microbiome course*
+from the *ISB Microbiome Course 2020*
 
-https://gibbons-lab.github.io/isb_course_2020/micom
+<br>
+<div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fa fa-bullhorn"></i>CC-BY-NC</a>
+<a href="https://cdiener.com"><i class="fa fa-globe"></i>cdiener.com</a>
+<a href="https://github.com/cdiener"><i class="fa fa-github"></i>cdiener</a>
+<a href="https://twitter.com/thaasophobia"><i class="fa fa-twitter"></i>@thaasophobia </a>
+</div>
 
 ---
 
