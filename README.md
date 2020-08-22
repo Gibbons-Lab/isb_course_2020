@@ -1,4 +1,4 @@
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/2.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 ![GitHub release](https://img.shields.io/github/tag/Gibbons-Lab/isb_course_2020.svg)
 ![Qiime 2 version](https://img.shields.io/badge/Qiime%202%20version-2020.6-blue.svg)
 [![part 1](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part1)](https://gibbons-lab.github.io/isb_course_2020/16S)
