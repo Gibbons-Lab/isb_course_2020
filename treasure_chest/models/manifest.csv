@@ -1,0 +1,9 @@
+sample_id,disease_stat,description,file,found_taxa,total_taxa,found_fraction,found_abundance_fraction
+ERR1883210,healthy,Donor 13,ERR1883210.pickle,5.0,5.0,1.0,0.8222566609048103
+ERR1883212,healthy,Donor 14,ERR1883212.pickle,9.0,10.0,0.9,0.84763736549358
+ERR1883214,Recurrent Clostridium difficile infection,Day 0 CD1,ERR1883214.pickle,3.0,3.0,1.0,0.9659116528639923
+ERR1883247,healthy,Donor CD3,ERR1883247.pickle,9.0,11.0,0.8181818181818182,0.8345255690215785
+ERR1883248,Recurrent Clostridium difficile infection,Day 1 CD1,ERR1883248.pickle,5.0,5.0,1.0,0.8467123635440466
+ERR1883260,healthy,CD2 Donor,ERR1883260.pickle,8.0,8.0,1.0,0.8553890840481126
+ERR1883294,Recurrent Clostridium difficile infection,Day 0 CD3,ERR1883294.pickle,7.0,7.0,1.0,0.9372439076989433
+ERR1883315,Recurrent Clostridium difficile infection,Day -1 CD4,ERR1883315.pickle,4.0,4.0,1.0,0.962787890978578

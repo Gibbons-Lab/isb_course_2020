@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Growth rates</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@5.15.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
+
+    <style>
+    #vis {
+        width: 100%;
+        margin: 1em;
+    }
+    </style>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Growth rates
+      </h1>
+      <p class="subtitle">
+        Each point denotes a single taxon in a single sample. Shown are the
+        predicted growth rates only if growth was observed (growth rate larger
+        than numerical tolerance of the solver).<br>
+        Click a point to select points from only that sample. Click on an
+        empty region of the plot to reset the selection.<br>
+        Hover over each point to see its annotations. Use the "..." menu in the
+        upper right hand side to export the plot into various formats.
+      </p>
+    </div>
+    <!-- Container for the visualization -->
+    <div class="container">
+    <div id="vis"></div>
+    <a href="#" class="button is-primary" onclick="download_data('growth_rates')">Download as CSV...</a>
+
+    </div>
+    <script>
+      // Assign the specification to a local variable vlSpec.
+      var vlSpec = {
+        $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+        width: 800,
+        height: 400,
+        data: {
+            values: [{"taxon":"Bacteroides","sample_id":"ERR1883210","abundance":0.7755164915,"growth_rate":0.2865510307},{"taxon":"Faecalibacterium","sample_id":"ERR1883210","abundance":0.0597680319,"growth_rate":0.026115551},{"taxon":"Parabacteroides","sample_id":"ERR1883210","abundance":0.0451250453,"growth_rate":0.0160392345},{"taxon":"Roseburia","sample_id":"ERR1883210","abundance":0.0825661472,"growth_rate":0.0278224769},{"taxon":"Sutterella","sample_id":"ERR1883210","abundance":0.0370242842,"growth_rate":0.005225046},{"taxon":"Akkermansia","sample_id":"ERR1883214","abundance":0.8514276823,"growth_rate":0.0190597522},{"taxon":"Clostridium","sample_id":"ERR1883214","abundance":0.1074924142,"growth_rate":0.0057809153},{"taxon":"Veillonella","sample_id":"ERR1883214","abundance":0.0410799035,"growth_rate":0.0022138241},{"taxon":"Bacteroides","sample_id":"ERR1883212","abundance":0.2537307331,"growth_rate":0.0742688729},{"taxon":"Bifidobacterium","sample_id":"ERR1883212","abundance":0.0352835357,"growth_rate":0.0103282914},{"taxon":"Blautia","sample_id":"ERR1883212","abundance":0.0630238358,"growth_rate":0.0184478231},{"taxon":"Clostridium","sample_id":"ERR1883212","abundance":0.0871867206,"growth_rate":0.0255150044},{"taxon":"Coprococcus","sample_id":"ERR1883212","abundance":0.0848154054,"growth_rate":0.0248273127},{"taxon":"Dorea","sample_id":"ERR1883212","abundance":0.0398421849,"growth_rate":0.0116621931},{"taxon":"Faecalibacterium","sample_id":"ERR1883212","abundance":0.29445194,"growth_rate":0.0858685839},{"taxon":"Roseburia","sample_id":"ERR1883212","abundance":0.0377161781,"growth_rate":0.0110403445},{"taxon":"Streptococcus","sample_id":"ERR1883212","abundance":0.1039494665,"growth_rate":0.0304271394},{"taxon":"Alistipes","sample_id":"ERR1883247","abundance":0.0469325588,"growth_rate":0.0445482916},{"taxon":"Bacteroides","sample_id":"ERR1883247","abundance":0.397208841,"growth_rate":0.3625629195},{"taxon":"Blautia","sample_id":"ERR1883247","abundance":0.0659535279,"growth_rate":0.0590959707},{"taxon":"Coprococcus","sample_id":"ERR1883247","abundance":0.0967342023,"growth_rate":0.0898046092},{"taxon":"Dorea","sample_id":"ERR1883247","abundance":0.0351020119,"growth_rate":0.0336300594},{"taxon":"Faecalibacterium","sample_id":"ERR1883247","abundance":0.1624752054,"growth_rate":0.1509204472},{"taxon":"Parabacteroides","sample_id":"ERR1883247","abundance":0.0836993483,"growth_rate":0.0764887195},{"taxon":"Roseburia","sample_id":"ERR1883247","abundance":0.0554335506,"growth_rate":0.0487408634},{"taxon":"Ruminococcus","sample_id":"ERR1883247","abundance":0.0564607538,"growth_rate":0.0532129951},{"taxon":"Akkermansia","sample_id":"ERR1883248","abundance":0.121701847,"growth_rate":0.0353202678},{"taxon":"Bacteroides","sample_id":"ERR1883248","abundance":0.6264691773,"growth_rate":0.3139506173},{"taxon":"Faecalibacterium","sample_id":"ERR1883248","abundance":0.124280403,"growth_rate":0.0692553798},{"taxon":"Parabacteroides","sample_id":"ERR1883248","abundance":0.0924082514,"growth_rate":0.045240137},{"taxon":"Ruminococcus","sample_id":"ERR1883248","abundance":0.0351403214,"growth_rate":0.0190135797},{"taxon":"Bacteroides","sample_id":"ERR1883294","abundance":0.4332719742,"growth_rate":0.406245387},{"taxon":"Fusobacterium","sample_id":"ERR1883294","abundance":0.1359871146,"growth_rate":0.1262873298},{"taxon":"Megasphaera","sample_id":"ERR1883294","abundance":0.1334560515,"growth_rate":0.1021659009},{"taxon":"Morganella","sample_id":"ERR1883294","abundance":0.0676484123,"growth_rate":0.0694686722},{"taxon":"Streptococcus","sample_id":"ERR1883294","abundance":0.0568338702,"growth_rate":0.0625112365},{"taxon":"Sutterella","sample_id":"ERR1883294","abundance":0.0303727566,"growth_rate":0.0096052069},{"taxon":"Veillonella","sample_id":"ERR1883294","abundance":0.1424298205,"growth_rate":0.145169125},{"taxon":"Cetobacterium","sample_id":"ERR1883315","abundance":0.2666875588,"growth_rate":0.0485016935},{"taxon":"Lactobacillus","sample_id":"ERR1883315","abundance":0.0712420349,"growth_rate":0.0103084477},{"taxon":"Sutterella","sample_id":"ERR1883315","abundance":0.1524078136,"growth_rate":0.0100982434},{"taxon":"Veillonella","sample_id":"ERR1883315","abundance":0.5096625927,"growth_rate":0.0952617846},{"taxon":"Bacteroides","sample_id":"ERR1883260","abundance":0.3776610411,"growth_rate":0.3449964119},{"taxon":"Blautia","sample_id":"ERR1883260","abundance":0.0805822002,"growth_rate":0.0732968436},{"taxon":"Clostridium","sample_id":"ERR1883260","abundance":0.0684651217,"growth_rate":0.0671855337},{"taxon":"Coprococcus","sample_id":"ERR1883260","abundance":0.0919591937,"growth_rate":0.0862220989},{"taxon":"Dorea","sample_id":"ERR1883260","abundance":0.0383538187,"growth_rate":0.0370517225},{"taxon":"Faecalibacterium","sample_id":"ERR1883260","abundance":0.2103437768,"growth_rate":0.1914331792},{"taxon":"Parabacteroides","sample_id":"ERR1883260","abundance":0.0773606536,"growth_rate":0.0711854255},{"taxon":"Roseburia","sample_id":"ERR1883260","abundance":0.0552741943,"growth_rate":0.0491635509}]
+        },
+        selection: {
+          pts: {type: "single", fields: ["sample_id"]}
+        },
+        mark: {
+            type: "point",
+            filled: true,
+            size: 40,
+            tooltip: {content: "data"}
+        },
+        encoding: {
+          y: {
+            field: "growth_rate",
+            type: "quantitative",
+            scale: {type: "log"},
+            axis: {title: "growth rate [1/h]", grid: false}
+          },
+          x: {
+            field: "taxon",
+            type: "nominal",
+            sort: {op: "median", field: "growth_rate"},
+            axis: {title: null}
+          },
+          color: {
+            condition: {
+              selection: "pts",
+              field: "taxon",
+              type: "nominal",
+              legend: null
+            },
+            value: "lightgrey"
+          },
+          opacity: {
+            condition: {
+                selection: "pts",
+                value: 0.8
+            },
+            value: 0.2
+          }
+        }
+      };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed("#vis", vlSpec, {renderer: "svg"}).then(function(r) {
+        svg = d3.select("#vis svg");
+        svg.attr("width", "100%").attr("height", "auto");
+      });
+
+      files = {'growth_rates': 'taxon,sample_id,abundance,growth_rate\nBacteroides,ERR1883210,0.7755164914824211,0.28655103072966714\nFaecalibacterium,ERR1883210,0.05976803189561434,0.026115550998243885\nParabacteroides,ERR1883210,0.04512504530627037,0.016039234541924078\nRoseburia,ERR1883210,0.0825661471547662,0.0278224768876106\nSutterella,ERR1883210,0.037024284160927866,0.005225045994940398\nAkkermansia,ERR1883214,0.8514276822531704,0.019059752179471173\nClostridium,ERR1883214,0.10749241422236054,0.00578091528318196\nVeillonella,ERR1883214,0.041079903524469,0.0022138240830280615\nBacteroides,ERR1883212,0.25373073306349403,0.0742688728687263\nBifidobacterium,ERR1883212,0.035283535712825546,0.0103282914391374\nBlautia,ERR1883212,0.06302383580686045,0.018447823111721325\nClostridium,ERR1883212,0.08718672063453126,0.025515004427881675\nCoprococcus,ERR1883212,0.08481540537225561,0.024827312712599196\nDorea,ERR1883212,0.03984218488082097,0.011662193065562727\nFaecalibacterium,ERR1883212,0.294451939981193,0.08586858387672486\nRoseburia,ERR1883212,0.03771617809395315,0.011040344545098942\nStreptococcus,ERR1883212,0.103949466454066,0.030427139360289287\nAlistipes,ERR1883247,0.046932558798526494,0.044548291569323384\nBacteroides,ERR1883247,0.3972088410314537,0.3625629194997368\nBlautia,ERR1883247,0.06595352791158968,0.05909597066773768\nCoprococcus,ERR1883247,0.09673420232360443,0.08980460915270615\nDorea,ERR1883247,0.035102011901388494,0.033630059384965244\nFaecalibacterium,ERR1883247,0.16247520544063473,0.15092044717132377\nParabacteroides,ERR1883247,0.08369934825729669,0.07648871953556009\nRoseburia,ERR1883247,0.0554335505809011,0.048740863416362336\nRuminococcus,ERR1883247,0.0564607537546047,0.05321299511177625\nAkkermansia,ERR1883248,0.12170184696569923,0.03532026783619662\nBacteroides,ERR1883248,0.626469177260734,0.31395061731525453\nFaecalibacterium,ERR1883248,0.1242804029743344,0.06925537984921336\nParabacteroides,ERR1883248,0.09240825137922765,0.04524013698998619\nRuminococcus,ERR1883248,0.035140321420004804,0.019013579702486447\nBacteroides,ERR1883294,0.43327197422917624,0.40624538704286456\nFusobacterium,ERR1883294,0.135987114588127,0.12628732975796103\nMegasphaera,ERR1883294,0.13345605154164747,0.10216590089969689\nMorganella,ERR1883294,0.06764841233317993,0.06946867218760151\nStreptococcus,ERR1883294,0.05683387022549471,0.06251123654853338\nSutterella,ERR1883294,0.030372756557754257,0.009605206942717558\nVeillonella,ERR1883294,0.14242982052462033,0.14516912501840404\nCetobacterium,ERR1883315,0.26668755875900974,0.04850169351441408\nLactobacillus,ERR1883315,0.0712420348897942,0.010308447669613603\nSutterella,ERR1883315,0.1524078136425363,0.010098243396986476\nVeillonella,ERR1883315,0.5096625927086598,0.09526178455908489\nBacteroides,ERR1883260,0.37766104105295234,0.3449964119370713\nBlautia,ERR1883260,0.08058220022928124,0.07329684363685927\nClostridium,ERR1883260,0.068465121678687,0.06718553371881551\nCoprococcus,ERR1883260,0.09195919374265356,0.08622209888701503\nDorea,ERR1883260,0.03835381869367735,0.03705172245397749\nFaecalibacterium,ERR1883260,0.21034377675552524,0.19143317924228762\nParabacteroides,ERR1883260,0.07736065359666816,0.0711854255230731\nRoseburia,ERR1883260,0.05527419425055506,0.049163550902636306\n'};
+
+function download_data(key) {
+    var blob = new Blob([files[key]], {type: "text/csv;charset=utf-8;"}),
+        filename = key + ".csv",
+        url = window.URL.createObjectURL(blob);
+    if (navigator.msSaveBlob) { // IE 10+
+        navigator.msSaveBlob(blob, filename);
+    } else {
+        var link = document.createElement("a");
+        if (link.download !== undefined) { // feature detection
+            // Browsers that support HTML5 download attribute
+            var url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", filename);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+}
+    </script>
+  </section>
+  </body>
+</html>
