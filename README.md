@@ -15,6 +15,7 @@ is to [download the entire repository](https://github.com/Gibbons-Lab/isb_course
 
 ## Part 1: Amplicon Sequencing Data Analysis with Qiime 2
 
+Presentation: [![part 1](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part1)](https://gibbons-lab.github.io/isb_course_2020/16S)
 Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Gibbons-Lab/isb_course_2020/blob/master/16S.ipynb)
 
 You can see the actual workshop walkthrough at
@@ -27,6 +28,7 @@ A [PDF version](part1.pdf) (lacks the output previews) is also available.
 
 ## Part 2: Modeling microbiota-wide metabolism with MICOM
 
+Presentation: [![part 2](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part2)](https://gibbons-lab.github.io/isb_course_2020/micom)
 Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Gibbons-Lab/isb_course_2020/blob/master/micom.ipynb)
 
 You can see the actual workshop walkthrough at
