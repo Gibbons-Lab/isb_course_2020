@@ -43,17 +43,17 @@ Let's get the slides first (use your computer, phone, TV, fridge, anything with 
 
 <!-- .slide: data-background="var(--secondary)" class="dark" -->
 
-# Qiime
+# QIIME
 
-Created ~2010 during the Human Microbiome Project (2007 - 2016) under leadership
+Created ~2010 during the Human Microbiome Project (2007 - 2016) under the leadership
 of Greg Caporaso and Rob Knight.
 
 ---
 
-## What is Qiime?
+## What is QIIME?
 
 > QIIME 2 is a powerful, extensible, and decentralized microbiome
-analysis package with a focus on data and analysis transparency.
+analysis package with a focus on data processing and analysis transparency.
 
 *Q*uantitative *i*nsights *i*nto *M*icrobial *E*cology
 
@@ -61,8 +61,8 @@ analysis package with a focus on data and analysis transparency.
 
 ## So what is it really?
 
-In its essence Qiime is a set of *commands* to transform microbiome *data* into
-*intermediate* outputs and *visualizations*.
+Essentially, QIIME is a set of *commands* to transform microbiome *data* into
+*intermediate outputs* and *visualizations*.
 
 <img src="assets/barplot.gif" width="100%">
 
@@ -70,8 +70,8 @@ It's commonly used via the *command line*.
 
 ---
 
-[Qiime 2](https://doi.org/10.1038/s41587-019-0209-9)
-was introduced 2016 and improves on Qiime 1 based on the experiences during the HMP.
+[QIIME 2](https://doi.org/10.1038/s41587-019-0209-9)
+was introduced in 2016 and improves upon Qiime 1, based on user experiences during the HMP.
 
 Major changes:
 
@@ -86,17 +86,16 @@ Major changes:
 
 ## Where to find help?
 
-Qiime 2 comes with a lot of help starting from https://qiime2.org such
-as [tutorials](https://docs.qiime2.org/2020.6/tutorials/),
+QIIME 2 comes with a lot of help, including a wide range of [tutorials](https://docs.qiime2.org/2020.6/tutorials/)
 [general documentation](https://docs.qiime2.org/2020.6/) and a
-[user forum](https://forum.qiime2.org/) to ask questions.
+[user forum](https://forum.qiime2.org/) where you can ask questions.
 
 ---
 
 ## Artifacts, actions and visualizations
 
-Qiime 2 manages *artifacts* which is basically intermediate data that is fed
-to *actions* to either produce other artifacts or *visualizations*.
+QIIME 2 manages *artifacts*, which are basically intermediate data that feed
+into *actions* to either produce other artifacts or *visualizations*.
 
 <img src="assets/key.png" width="50%"><img src="assets/overview.png" width="50%">
 
@@ -104,16 +103,16 @@ to *actions* to either produce other artifacts or *visualizations*.
 
 ## Remember
 
-Artifacts can be *intermediate steps*, but Visualizations are *end points*
+Artifacts often represent *intermediate steps*, but Visualizations are *end points*
 meant for human consumption :point_up:.
 
 ---
 
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
-## Analyzing the microbial composition during recurrent <i>C. diff</i> infection
+## Analyzing gut microbial composition during recurrent <i>C. diff</i> infections
 
-16S amplicon sequencing data of the V4 region from fecal samples
+16S amplicon sequencing data of the V4 region from human fecal samples
 
 4 healthy donors and 4 individuals with recurrent infection.
 
@@ -173,35 +172,35 @@ BBBBAF?A@D2BEEEGGGFGGGHGGGCFGFHHCFHCEFGGH...
 
 ---
 
-We have our raw sequencing data but Qiime 2 only operates on artifacts. How
-do we convert our data to an artifact?
+We have our raw sequencing data but QIIME 2 only operates on artifacts. How
+do we convert our data into an artifact??
 
 :egg: ↔ :hatched_chick:
 
 ---
 
-## Our first Qiime 2 commands
+## Our first QIIME 2 commands
 
 We can import the data with the `import` action. For that we have to give
-Qiime 2 a *manifest* (list of raw files) and tell it what *type of data* we
+QIIME 2 a *manifest* (list of raw files) and tell it what *type of data* we
 are importing and what *type of artifact* we want.
 
 :computer: let's jump back to the open Colaboratory notebook...
 
 ---
 
-## View a Qiime 2 visualization
+## View a QIIME 2 visualization
 
-There are two ways to look at a Qiime 2 visualization:
+There are two ways to look at a QIIME 2 visualization:
 
 - visit https://view.qiime2.org and load the file
-- use `qiime tools view [file.qzv]` if you have Qiime 2 installed
+- use `qiime tools view [file.qzv]` if you have QIIME 2 installed
 
-:thinking_face: What do you observe across the read? Where would you truncate the reads?
+:thinking_face: What do you observe across the length of the read? Where would you truncate the reads?
 
 ---
 
-Qiime 2 commands can become pretty long. Here some pointers to remember the
+QIIME 2 commands can get pretty long. Here are some pointers to remember the
 structure of a command:
 
 ```
@@ -219,7 +218,7 @@ Argument types usually begin with a letter denoting their meaning:
 
 ## Time to bring in the big guns :bomb::zap:
 
-We will now run the DADA2 plugin which will do 3 things:
+We will now run the DADA2 plugin, which will do 3 things:
 
 1. filter and trim the reads
 2. find the most likely original sequences in the sample (ASVs)
@@ -228,7 +227,7 @@ We will now run the DADA2 plugin which will do 3 things:
 
 ---
 
-## Identifying alternative sequence variants (ASVs)
+## Identifying amplicon sequence variants (ASVs)
 
 <img src="assets/dada2.png" width="80%">
 
@@ -241,7 +240,7 @@ Expectation-Maximization (EM) algorithm to find alternative sequence variants
 
 <img src="assets/chimera.png" width="60%">
 
-The used primers were F515/R806. How long is the amplified fragment?
+The primers used in this study were F515/R806. How long is the amplified fragment?
 
 ---
 
@@ -250,15 +249,15 @@ We also have a list of ASVs.
 
 <br>
 
-:thinking_face: Do you have an idea what we could do with those two data sets? What quantities
+:thinking_face: Do you have an idea for what we could do with those two data sets? What quantities
 might we be interested in?
 
 ---
 
 ## Relationship between ASVs
 
-One of the basic things we might want to see is how the sequences across
-all samples are related to one another. We are interested in their *phylogeny*.
+One of the basic things we might want to look at is how the sequences across
+all samples are related to one another. That is, we are often interested in their *phylogeny*.
 
 
 ---
@@ -273,8 +272,8 @@ You can visualize your tree using iTOL (https://itol.embl.de/).
 
 ## Diversity
 
-In microbial community analysis we are usually interested in two different diversity quantities,
-*alpha diversity* and *beta diversity*.
+In microbial community analysis we are usually interested in two different families of diversity metrics,
+*alpha diversity* (ecological diversity within a sample) and *beta diversity* (ecological differences between samples).
 
 ---
 
@@ -284,20 +283,21 @@ How diverse is a single sample?
 
 <br>
 
-- how many taxa do we observe (richness)? → #observed taxa
-- are taxa equally abundant or are there rare/dominant taxa? → Shannon, Evenness
+- how many taxa do we observe? → richness (# observed taxa)
+- how evenly are abundances distributed across taxa? → evenness
+- metrics that combine both richness and evenness → Shannon entropy
 
 ---
 
 ## Beta diversity
 
-How different are two or more samples/donors/sites from each other?
+How different are two or more samples/donors/sites from one another other?
 
 <br>
 
 - how many taxa are *shared* between samples? → Jaccard index
-- do shared taxa have the *same abundance*? → Bray-Curtis distance
-- do samples share *genetically similar* taxa? → UniFrac, Faith PD
+- do shared taxa have the *similar abundances*? → Bray-Curtis distance
+- do samples share *phylogenetically similar* sets of taxa? → weighted or unweighted UniFrac
 
 ---
 
@@ -317,7 +317,7 @@ those correspond to.
 
 <br>
 
-:thinking_face: What would you do to go from a sequence to an organism/bacteria?
+:thinking_face: What would you do to go from a sequence to an organism's name?
 
 ---
 
@@ -327,14 +327,14 @@ those correspond to.
 
 ---
 
-Even though just looking for our sequence in a *database of known genes*
-seems like the best idea that does not work great in practice. Why?
+Even though directly aligning our sequences to a *database of known genes*
+seems most intuitive, this does not always work well in practice. Why?
 
 <br>
 
-More elaborate methods use *subsequences (k-mers)* and their counts to *predict* the
+Alternative methods use *subsequences (k-mers)* and their counts to *predict* the
 lineage/taxonomy with *machine learning* methods. For 16S amplicon fragments this
-provides better *generalization*.
+often provides better *generalization* and faster results.
 
 ---
 
