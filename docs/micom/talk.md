@@ -43,7 +43,7 @@ Let's get the slides first (use your computer, phone, TV, fridge)
 
 Tries to predict what the microbiome *does* from sequencing data.
 
-Uses gene abundances (metagenomics, PICRUST) or metabolomics.
+Uses gene/transcript/protein/metabolite abundances (metagenomics, metatranscriptomics, proteomics or metabolomics).
 
 Yields metabolic *capacity* or *potential*.
 
@@ -79,7 +79,7 @@ video courtesy of [S. Nayyak](https://twitter.com/Na_y_ak) and [J. Iwasa](https:
 
 <!-- .slide: data-background="var(--secondary)" class="dark" -->
 
-# Flux Balance Analysis
+# Flux Balance Analysis (FBA)
 
 Can we infer the most likely fluxes in a biological system?
 
@@ -101,7 +101,7 @@ The goal of FBA is to *reduce* the flux space to a *biologically relevant* one.
 
 ---
 
-## Selecting biological relevant fluxes via parsimony
+## Selecting biologically relevant fluxes via parsimony
 
 <img src="assets/pfba.png" width="40%">
 
@@ -146,7 +146,7 @@ $$
 \mu_c = \sum_i a_i\cdot\mu_i
 $$
 
-What so hard? Can't we just maximize the community growth rate? Well...
+Why is this so hard? Can't we just maximize the community growth rate? Well...
 
 ---
 
@@ -206,7 +206,7 @@ Well, metagenome-scale models are slightly larger... :sweat:
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
 We observed that the *overall production flux* $v_p = \sum a_i\cdot v_i^{ex}$
-associates the most with the phenotype.
+is most directly related to the phenotype.
 
 This is the flux the *intestinal cells* can interact with.
 
