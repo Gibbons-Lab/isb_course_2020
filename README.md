@@ -5,7 +5,7 @@
 [![part 2](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=part2)](https://gibbons-lab.github.io/isb_course_2020/micom)
 
 
-# Data and Materials for the 2020 ISB microbiome course
+# Data and Materials for the 2020 ISB Microbiome Course
 
 ## Output
 
