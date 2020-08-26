@@ -63,7 +63,9 @@ or `materials/treasure_chest` in the Colaboratory notebook.
 
 <!-- .slide: data-background="var(--secondary)" class="dark" -->
 
-# QIIME (pronounced like *chime*)
+# QIIME
+
+Pronounced like *chime*.
 
 Created ~2010 during the Human Microbiome Project (2007 - 2016) under the leadership
 of Greg Caporaso and Rob Knight.
@@ -131,6 +133,12 @@ https://docs.qiime2.org/2020.8/tutorials/overview/
 
 Artifacts often represent *intermediate steps*, but Visualizations are *end points*
 meant for human consumption :point_up:.
+
+---
+
+## What is amplicon sequencing?
+
+<img src="assets/16S.png" width="100%">
 
 ---
 
