@@ -248,20 +248,6 @@ might we be interested in?
 
 ---
 
-## Relationship between ASVs
-
-One of the basic things we might want to look at is how the sequences across
-all samples are related to one another. That is, we are often interested in their *phylogeny*.
-
-
----
-
-You can visualize your tree using iTOL (https://itol.embl.de/).
-
-<img src="assets/tree.png" width="75%">
-
----
-
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
 ## Diversity metrics
@@ -283,6 +269,15 @@ How diverse is a single sample?
   → Evenness index
 - *mixtures*: metrics that combine both richness and evenness<br>
   → Shannon index
+
+---
+
+## Statistical tests for alpha diversity
+
+Alpha diversity will provide a single value/covariate for each sample.
+
+It can be treated as any other sample measurement and is suitable for classic
+univariate tests (t-test, Mann-Whitney U test).
 
 ---
 
@@ -309,6 +304,22 @@ Weighted UniFrac scales branches by abundance.
 
 ---
 
+## How to build a phylogenetic tree?
+
+One of the basic things we might want to look at is how the sequences across
+all samples are related to one another. That is, we are often interested in their *phylogeny*.
+
+Phylogenetic trees are built from *multiple sequence alignments* and sequences are
+arranged by *sequence similarity* (branch length).
+
+---
+
+You can visualize your tree using iTOL (https://itol.embl.de/).
+
+<img src="assets/tree.png" width="75%">
+
+---
+
 ## Principal Coordinate Analysis
 
 <img src="assets/pcoa.png" width="100%">
@@ -316,10 +327,9 @@ Weighted UniFrac scales branches by abundance.
 
 ---
 
-## Statistical tests diversity metrics
+## Statistical tests for beta diversity
 
-- alpha diversity: classic univariate tests (t-test, Mann-Whitney U test)
-- beta diversity: PERMANOVA
+More complicated. Usually not normal and very heterogeneous. PERMANOVA can deal with that.
 
 <img src="assets/permanova.png" width="80%">
 
