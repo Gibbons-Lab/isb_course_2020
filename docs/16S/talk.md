@@ -1,6 +1,6 @@
 <!-- .slide: data-background="assets/isb/data-midnight.jpg" class="dark" -->
 
-# Amplicon Sequencing Data Analysis with Qiime 2
+# Amplicon Sequencing Data Analysis with QIIME 2
 
 ### Christian Diener
 
