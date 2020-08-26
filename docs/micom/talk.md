@@ -2,7 +2,7 @@
 
 # Modeling microbiota-wide metabolism with MICOM
 
-### Christian Diener
+### Christian Diener, Gibbons Lab
 
 <img src="assets/isb/logo.png" width="40%">
 
@@ -11,8 +11,8 @@ from the *ISB Microbiome Course 2020*
 <br>
 <div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fa fa-bullhorn"></i>CC-BY-NC</a>
-<a href="https://cdiener.com"><i class="fa fa-globe"></i>cdiener.com</a>
-<a href="https://github.com/cdiener"><i class="fa fa-github"></i>cdiener</a>
+<a href="https://gibbons.isbscience.org/"><i class="fa fa-globe"></i>gibbons.isbscience.org/</a>
+<a href="https://github.com/gibbons-lab"><i class="fa fa-github"></i>gibbons-lab</a>
 <a href="https://twitter.com/thaasophobia"><i class="fa fa-twitter"></i>@thaasophobia </a>
 </div>
 

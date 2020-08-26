@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="243.84"
+   inkscape:export-xdpi="243.84"
+   inkscape:export-filename="/home/cdiener/teaching/isb_course_2020/docs/16S/assets/naive_bayes.png"
+   sodipodi:docname="naive_bayes.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 200 100"
+   height="100mm"
+   width="200mm">
+  <defs
+     id="defs2">
+    <rect
+       id="rect1032"
+       height="34.684005"
+       width="156.24161"
+       y="-37.775142"
+       x="9.6876818" />
+    <rect
+       id="rect990"
+       height="19.514675"
+       width="75.115807"
+       y="65.176392"
+       x="10.100466" />
+    <rect
+       id="rect982"
+       height="20.125973"
+       width="62.061096"
+       y="4.2265582"
+       x="124.83826" />
+    <rect
+       id="rect953"
+       height="21.260216"
+       width="137.52585"
+       y="39.702499"
+       x="58.337711" />
+    <rect
+       id="rect12"
+       height="20.841345"
+       width="125.61236"
+       y="29.57818"
+       x="14.579471" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect12-3" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect41" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect12-7" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect70" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect72" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect74" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect76" />
+    <rect
+       x="14.579471"
+       y="29.57818"
+       width="125.61236"
+       height="20.841345"
+       id="rect78" />
+    <filter
+       id="filter978"
+       inkscape:label="Drop Shadow"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood968"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.501961" />
+      <feComposite
+         id="feComposite970"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur972"
+         result="blur"
+         stdDeviation="0.5"
+         in="composite1" />
+      <feOffset
+         id="feOffset974"
+         result="offset"
+         dy="0.3"
+         dx="0.3" />
+      <feComposite
+         id="feComposite976"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <rect
+       x="124.83826"
+       y="4.2265582"
+       width="62.061096"
+       height="20.125973"
+       id="rect982-6" />
+    <rect
+       x="124.83826"
+       y="4.2265582"
+       width="62.061096"
+       height="20.125973"
+       id="rect1003" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="28"
+     inkscape:window-x="0"
+     inkscape:window-height="1020"
+     inkscape:window-width="1920"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-center="false"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="173.44198"
+     inkscape:cx="247.79448"
+     inkscape:zoom="0.98303483"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       xml:space="preserve"
+       id="text18"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12);fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       transform="matrix(1.4697717,0,0,1.4697717,2.9315556,-18.375643)"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="stroke:none">ACGCGC</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text22"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12);fill:#2196f3;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       transform="matrix(1.4697717,0,0,1.4697717,2.7601457,-9.8839663)"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="fill:#2196f3;stroke:none">ACG</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text26"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12);fill:#26a69a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       transform="matrix(1.4697717,0,0,1.4697717,6.2412217,-2.1683661)"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="fill:#26a69a;stroke:none"> CGC</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text30"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12);fill:#e57373;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       transform="matrix(1.4697717,0,0,1.4697717,9.3098196,5.7202939)"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="fill:#e57373;stroke:none">  GCG</tspan></tspan></text>
+    <text
+       transform="matrix(1.4697717,0,0,1.4697717,15.078259,13.190485)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12-3);fill:#009688;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text30-6"
+       xml:space="preserve"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="fill:#009688;stroke:none">  CGC</tspan></tspan></text>
+    <rect
+       transform="matrix(1.7005784,0,0,1.7005784,-18.89558,-6.3010963)"
+       y="13.172994"
+       x="63.344757"
+       height="27.407799"
+       width="48.023655"
+       id="rect966"
+       style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;filter:url(#filter978)" />
+    <text
+       transform="matrix(1.2497507,0,0,1.2497507,100.40114,-5.00369)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12-7);fill:#2196f3;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text22-5"
+       xml:space="preserve"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Semi-Bold Italic'">P</tspan><tspan
+           style="fill:#2196f3;stroke:none">(ACG) = 0.25</tspan></tspan></text>
+    <text
+       transform="matrix(1.2497507,0,0,1.2497507,100.39165,4.6420805)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12-7);fill:#26a69a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text26-3"
+       xml:space="preserve"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Semi-Bold Italic'">P</tspan><tspan
+           style="fill:#26a69a;stroke:none">(CGC) = 0.25 </tspan></tspan></text>
+    <text
+       transform="matrix(1.2497507,0,0,1.2497507,100.24409,14.163091)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect12-7);fill:#e57373;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text30-5"
+       xml:space="preserve"><tspan
+         x="14.580078"
+         y="34.827454"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Semi-Bold Italic'">P</tspan><tspan
+           style="fill:#e57373;stroke:none">(GCG) = 0.5</tspan></tspan></text>
+    <text
+       transform="matrix(1.4697717,0,0,1.4697717,-70.787212,17.446106)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect953);fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text951"
+       xml:space="preserve"><tspan
+         x="58.337891"
+         y="44.952454"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Semi-Bold Italic'">P</tspan><tspan
+           style="fill:#000000;stroke:none">(query | taxon 1) = 0.25 + 0.25</tspan><tspan
+           style="font-size:65%;baseline-shift:super">2</tspan><tspan
+           style="fill:#000000;stroke:none"> + 0.5 = 0.975</tspan></tspan></text>
+    <text
+       transform="matrix(0.82835376,0,0,0.82835376,-12.58707,13.71073)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect982);fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       id="text980"
+       xml:space="preserve"><tspan
+         x="124.83789"
+         y="9.4758919"><tspan
+           style="fill:#000000">reference model
+</tspan></tspan><tspan
+         x="124.83789"
+         y="16.531441"><tspan
+           style="fill:#000000">taxon 1</tspan></tspan></text>
+    <path
+       id="path986"
+       d="m 15.96632,88.071925 v 2.641972 h 61.259201 v -2.844823"
+       style="fill:none;stroke:#5c6bc0;stroke-width:0.367443;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       transform="matrix(0.79509723,0,0,0.79509723,17.662677,40.053255)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect990);fill:#5c6bc0;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;"
+       id="text988"
+       xml:space="preserve"><tspan
+         x="10.099609"
+         y="70.425111"><tspan
+           style="fill:#5c6bc0;stroke:none">choose highest taxon</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text980-2"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect982-6);fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;"
+       transform="matrix(0.82835377,0,0,0.82835377,-78.797821,12.418813)"><tspan
+         x="124.83789"
+         y="9.4758919"><tspan>query sequence</tspan></tspan></text>
+    <text
+       transform="translate(-7.7242983,39.258767)"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect1032);fill:#5c6bc0;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;"
+       id="text1030"
+       xml:space="preserve"><tspan
+         x="9.6875"
+         y="-32.526061"><tspan>Multinomial Naive Bayes Classifier</tspan></tspan></text>
+  </g>
+</svg>

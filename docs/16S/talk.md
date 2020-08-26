@@ -2,7 +2,7 @@
 
 # Amplicon Sequencing Data Analysis with QIIME 2
 
-### Christian Diener
+### Christian Diener, Gibbons Lab
 
 <img src="assets/isb/logo.png" width="40%">
 
@@ -11,8 +11,8 @@ from the *ISB Microbiome Course 2020*
 <br>
 <div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fa fa-bullhorn"></i>CC-BY-NC</a>
-<a href="https://cdiener.com"><i class="fa fa-globe"></i>cdiener.com</a>
-<a href="https://github.com/cdiener"><i class="fa fa-github"></i>cdiener</a>
+<a href="https://gibbons.isbscience.org/"><i class="fa fa-globe"></i>gibbons.isbscience.org/</a>
+<a href="https://github.com/gibbons-lab"><i class="fa fa-github"></i>gibbons-lab</a>
 <a href="https://twitter.com/thaasophobia"><i class="fa fa-twitter"></i>@thaasophobia </a>
 </div>
 
@@ -38,6 +38,26 @@ Let's get the slides first (use your computer, phone, TV, fridge, anything with 
 
 <a href="https://colab.research.google.com/github/gibbons-lab/isb_course_2020/blob/master/16S.ipynb"
    target="_blank">Click me to open the notebook!</a>
+
+---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+# Setup
+
+:computer: Let's switch to the notebook and get started
+
+---
+
+### Wait... what?
+
+<img src="assets/guide.png" width="30%">
+
+*All* output we generate can be found in the `treasure_chest` folder at
+
+https://github.com/gibbons-lab/isb_course_2020/treasure_chest
+
+or `materials/treasure_chest` in the Colaboratory notebook.
 
 ---
 
@@ -71,7 +91,7 @@ It's commonly used via the *command line*.
 ---
 
 [QIIME 2](https://doi.org/10.1038/s41587-019-0209-9)
-was introduced in 2016 and improves upon Qiime 1, based on user experiences during the HMP.
+was introduced in 2016 and improves upon QIIME 1, based on user experiences during the HMP.
 
 Major changes:
 
@@ -98,6 +118,12 @@ QIIME 2 manages *artifacts*, which are basically intermediate data that feed
 into *actions* to either produce other artifacts or *visualizations*.
 
 <img src="assets/key.png" width="50%"><img src="assets/overview.png" width="50%">
+
+<div class="footnote">
+
+https://docs.qiime2.org/2020.8/tutorials/overview/
+
+</div>
 
 ---
 
@@ -133,26 +159,6 @@ courtesy of [Stephanie Swegle](https://see.isbscience.org/steam2019/stephanie-3/
 
 ---
 
-<!-- .slide: data-background="var(--primary)" class="dark" -->
-
-# Setup
-
-:computer: Let's switch to the notebook and get started
-
----
-
-### Wait... what?
-
-<img src="assets/guide.png" width="30%">
-
-*All* output we generate can be found in the `treasure_chest` folder at
-
-https://github.com/gibbons-lab/isb_course_2020/treasure_chest
-
-or `materials/treasure_chest` in the Colaboratory notebook.
-
----
-
 ## What will we do today?
 
 <img src="assets/steps.png" width="100%">
@@ -175,44 +181,15 @@ BBBBAF?A@D2BEEEGGGFGGGHGGGCFGFHHCFHCEFGGH...
 We have our raw sequencing data but QIIME 2 only operates on artifacts. How
 do we convert our data into an artifact??
 
-:egg: ↔ :hatched_chick:
+:egg: or :hatched_chick:?
 
 ---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
 
 ## Our first QIIME 2 commands
 
-We can import the data with the `import` action. For that we have to give
-QIIME 2 a *manifest* (list of raw files) and tell it what *type of data* we
-are importing and what *type of artifact* we want.
-
-:computer: let's jump back to the open Colaboratory notebook...
-
----
-
-## View a QIIME 2 visualization
-
-There are two ways to look at a QIIME 2 visualization:
-
-- visit https://view.qiime2.org and load the file
-- use `qiime tools view [file.qzv]` if you have QIIME 2 installed
-
-:thinking_face: What do you observe across the length of the read? Where would you truncate the reads?
-
----
-
-QIIME 2 commands can get pretty long. Here are some pointers to remember the
-structure of a command:
-
-```
-qiime plugin action --i-argument1 ... --o-argument2 ...
-```
-
-Argument types usually begin with a letter denoting their meaning:
-
-- `--i-...` = input files
-- `--o-...` = output files
-- `--p-...` = parameters
-- `--m-...` = metadata
+:computer: Let's switch to the notebook and get started
 
 ---
 
@@ -227,7 +204,16 @@ We will now run the DADA2 plugin, which will do 3 things:
 
 ---
 
-## Identifying amplicon sequence variants (ASVs)
+## Preprocessing sequencing reads
+
+1. trim low quality regions
+2. remove reads with low average quality
+3. remove reads with ambiguous bases (Ns)
+4. remove PhiX (added to sequencing)
+
+---
+
+## Identifying alternative sequence variants (ASVs)
 
 <img src="assets/dada2.png" width="80%">
 
@@ -270,7 +256,7 @@ You can visualize your tree using iTOL (https://itol.embl.de/).
 
 <!-- .slide: data-background="var(--primary)" class="dark" -->
 
-## Diversity
+## Diversity metrics
 
 In microbial community analysis we are usually interested in two different families of diversity metrics,
 *alpha diversity* (ecological diversity within a sample) and *beta diversity* (ecological differences between samples).
@@ -281,11 +267,14 @@ In microbial community analysis we are usually interested in two different famil
 
 How diverse is a single sample?
 
-<br>
+<img src="assets/alpha_diversity.png" width="50%">
 
-- how many taxa do we observe? → richness (# observed taxa)
-- how evenly are abundances distributed across taxa? → evenness
-- metrics that combine both richness and evenness → Shannon entropy
+- *richness:* how many taxa do we observe (richness)?<br>
+  → #observed taxa, Simpson index
+- *evenness*: how evenly are abundances distributed across taxa?<br>
+  → Evenness index
+- *mixtures*: metrics that combine both richness and evenness<br>
+  → Shannon index
 
 ---
 
@@ -293,11 +282,22 @@ How diverse is a single sample?
 
 How different are two or more samples/donors/sites from one another other?
 
-<br>
+<img src="assets/beta_diversity.png" width="50%">
 
-- how many taxa are *shared* between samples? → Jaccard index
-- do shared taxa have the *similar abundances*? → Bray-Curtis distance
-- do samples share *phylogenetically similar* sets of taxa? → weighted or unweighted UniFrac
+- *unweighted:* how many taxa are *shared* between samples?<br>
+  → Jaccard index, unweighted UniFrac
+- *weighted:* do shared taxa have *similar abundances*?<br>
+  → Bray-Curtis distance, weighted UniFrac
+
+---
+
+### UniFrac
+
+Do samples share *genetically similar* taxa?
+
+<img src="assets/unifrac.png" width="70%">
+
+Weighted UniFrac scales branches by abundance.
 
 ---
 
@@ -305,6 +305,23 @@ How different are two or more samples/donors/sites from one another other?
 
 <img src="assets/pcoa.png" width="100%">
 
+
+---
+
+## Statistical tests diversity metrics
+
+- alpha diversity: classic univariate tests (t-test, Mann-Whitney U test)
+- beta diversity: PERMANOVA
+
+<img src="assets/permanova.png" width="80%">
+
+---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+## Run the diversity analyses
+
+:computer: Let's switch to the notebook and calculate the diversity metrics
 
 ---
 
@@ -330,11 +347,21 @@ those correspond to.
 Even though directly aligning our sequences to a *database of known genes*
 seems most intuitive, this does not always work well in practice. Why?
 
-<br>
+---
+
+<img src="assets/naive_bayes.png" width="75%">
 
 Alternative methods use *subsequences (k-mers)* and their counts to *predict* the
 lineage/taxonomy with *machine learning* methods. For 16S amplicon fragments this
 often provides better *generalization* and faster results.
+
+---
+
+<!-- .slide: data-background="var(--primary)" class="dark" -->
+
+## Let's assign taxonomy to the samples
+
+:computer: Let's switch to the notebook and assign taxonomy to our ASVs
 
 ---
 
