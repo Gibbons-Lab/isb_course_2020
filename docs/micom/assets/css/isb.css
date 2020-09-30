@@ -384,8 +384,8 @@ section.has-dark-background, section.dark {
   --gray: #949494; }
 
 .reveal .slides {
-  margin-left: 6vw;
-  margin-right: 5vw; }
+  margin-left: 4vw;
+  margin-right: 10vw; }
 
 .reveal .slides .pdf-page section {
   left: 6vw !important; }
