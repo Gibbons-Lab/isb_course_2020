@@ -20,7 +20,7 @@ MINICONDA_PATH = (
     "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 )
 QIIME_YAML_URL = (
-    "https://data.qiime2.org/distro/core/qiime2-2020.6-py36-linux-conda.yml"
+    "https://data.qiime2.org/distro/core/qiime2-2020.8-py36-linux-conda.yml"
 )
 QIIME_YAML = os.path.basename(QIIME_YAML_URL)
 
