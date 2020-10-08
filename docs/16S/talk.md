@@ -367,9 +367,11 @@ seems most intuitive, this does not always work well in practice. Why?
 
 ---
 
+## Multinomial Naive Bayes
+
 <img src="assets/naive_bayes.png" width="75%">
 
-Alternative methods use *subsequences (k-mers)* and their counts to *predict* the
+Instead, use *subsequences (k-mers)* and their counts to *predict* the
 lineage/taxonomy with *machine learning* methods. For 16S amplicon fragments this
 often provides better *generalization* and faster results.
 
