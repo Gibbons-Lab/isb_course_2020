@@ -12,13 +12,19 @@
    viewBox="0 0 200 80"
    version="1.1"
    id="svg3360"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="flux cone.svg"
    inkscape:export-filename="/home/cdiener/teaching/isb_course_2020/docs/micom/assets/flux_cone.png"
    inkscape:export-xdpi="243.84"
    inkscape:export-ydpi="243.84">
   <defs
      id="defs3354">
+    <rect
+       x="34.448941"
+       y="2.6181225"
+       width="45.558202"
+       height="18.568145"
+       id="rect432" />
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -1758,7 +1764,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0691839"
+     inkscape:zoom="1.1683616"
      inkscape:cx="380.69743"
      inkscape:cy="128.59402"
      inkscape:document-units="mm"
@@ -1771,7 +1777,7 @@
      inkscape:window-width="1920"
      inkscape:window-height="1140"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="28"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -1873,8 +1879,8 @@
            style="font-size:65%;baseline-shift:sub">2</tspan><tspan
            style="shape-inside:url(#rect4348-8)">O</tspan></tspan></text>
     <rect
-       transform="matrix(0.68634571,0,0,0.68634571,-9.4905858,-119.21542)"
-       style="fill:#ffffff;stroke:none;stroke-width:1.26001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4521)"
+       transform="matrix(0.81734371,0,0,0.68634571,-21.539191,-119.21542)"
+       style="fill:#ffffff;stroke:none;stroke-width:1.15463;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter4521)"
        id="rect4503"
        width="88.3367"
        height="39.002598"
@@ -1885,14 +1891,14 @@
     <text
        xml:space="preserve"
        id="text4485"
-       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;shape-inside:url(#rect4487);"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4487);fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;"
        transform="matrix(1.170627,0,0,1.170627,-72.860445,-236.36967)"><tspan
-         x="87.945602"
-         y="253.95831"><tspan>v</tspan><tspan
+         x="83.446989"
+         y="253.95831"><tspan>2·v</tspan><tspan
            style="font-size:65%;baseline-shift:sub">H</tspan><tspan>2</tspan><tspan
            style="font-size:65%;baseline-shift:sub">O</tspan><tspan> - 2·v</tspan><tspan
-           style="font-size:65%;baseline-shift:sub">H</tspan><tspan> - v</tspan><tspan
-           style="font-size:65%;baseline-shift:sub">O</tspan><tspan> = 0
+           style="font-size:65%;baseline-shift:sub">H2</tspan><tspan> - v</tspan><tspan
+           style="font-size:65%;baseline-shift:sub">O2</tspan><tspan> = 0
 </tspan></tspan><tspan
          x="101.01695"
          y="261.01387"><tspan>v</tspan><tspan
@@ -1902,20 +1908,24 @@
        xml:space="preserve"
        id="text4505"
        style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4507);fill:#4527a0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;"
-       transform="matrix(0.68634571,0,0,0.68634571,-45.378111,-67.858177)"><tspan
+       transform="matrix(0.68634571,0,0,0.68634571,-48.553113,-67.858177)"><tspan
          x="106.99713"
          y="177.69855"><tspan
            style="fill:#4527a0;stroke:none">balance equations</tspan></tspan></text>
-    <path
-       style="fill:none;stroke:#b39ddb;stroke-width:0.658246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4643);marker-mid:url(#marker4643);marker-end:url(#marker4643)"
-       d="m 27.421934,4.7676519 c 0.109871,8.3565741 2.582364,8.6387041 27.849173,8.6387041 23.103161,0 27.684365,0.291924 27.684365,-8.0513523"
-       id="path4639"
-       sodipodi:nodetypes="csc" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path4639-0"
-       d="m 20.455498,4.7676519 c 0.109871,8.3565741 2.462353,8.6387051 26.804207,8.6387051"
-       style="fill:none;stroke:#b39ddb;stroke-width:0.658246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4836)" />
+    <g
+       id="g438"
+       transform="translate(0,2.1166667)">
+      <path
+         style="fill:none;stroke:#b39ddb;stroke-width:0.658246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4643);marker-mid:url(#marker4643);marker-end:url(#marker4643)"
+         d="m 27.421934,4.7676519 c 0.109871,8.3565741 2.582364,8.6387041 27.849173,8.6387041 23.103161,0 27.684365,0.291924 27.684365,-8.0513523"
+         id="path4639"
+         sodipodi:nodetypes="csc" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path4639-0"
+         d="m 20.455498,4.7676519 c 0.109871,8.3565741 2.462353,8.6387051 26.804207,8.6387051"
+         style="fill:none;stroke:#b39ddb;stroke-width:0.658246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4836)" />
+    </g>
     <g
        id="g8746"
        transform="matrix(1.3436926,0,0,1.3436926,-19.643924,8.7224664)">
@@ -2192,5 +2202,17 @@
          cy="27.029827"
          r="2.4929492" />
     </g>
+    <text
+       xml:space="preserve"
+       id="text430"
+       style="font-size:5.64444px;line-height:1.05;font-family:Lato;-inkscape-font-specification:Lato;white-space:pre;shape-inside:url(#rect432);fill:#7e57c2;stroke-width:0.475567;stroke-linecap:round;stroke-linejoin:round;"
+       transform="matrix(0.84110106,0,0,0.84110106,11.142501,-0.555272)"><tspan
+         x="34.449219"
+         y="7.3020727"><tspan
+           style="fill:#7e57c2;stroke-width:0.475567">constant flow
+</tspan></tspan><tspan
+         x="34.449219"
+         y="13.228735"><tspan
+           style="fill:#7e57c2;stroke-width:0.475567">(steady state)</tspan></tspan></text>
   </g>
 </svg>
