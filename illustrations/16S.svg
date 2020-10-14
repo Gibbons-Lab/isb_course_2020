@@ -11,7 +11,7 @@
    inkscape:export-xdpi="243.84"
    inkscape:export-filename="/home/cdiener/teaching/isb_course_2020/docs/16S/assets/16S.png"
    sodipodi:docname="16S.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 200 90"
@@ -162,7 +162,7 @@
      inkscape:window-maximized="1"
      inkscape:window-y="28"
      inkscape:window-x="0"
-     inkscape:window-height="1020"
+     inkscape:window-height="1140"
      inkscape:window-width="1920"
      inkscape:snap-global="true"
      showgrid="false"
@@ -170,8 +170,8 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
      inkscape:cy="256.04857"
-     inkscape:cx="65.655178"
-     inkscape:zoom="1.3902212"
+     inkscape:cx="370.93959"
+     inkscape:zoom="1.5191784"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -186,7 +186,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1233,7 +1233,7 @@
        sodipodi:nodetypes="cc" />
     <text
        transform="matrix(0.38706316,0,0,0.38706316,-24.062857,72.655873)"
-       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2146);fill:#039be5;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2146);fill:#039be5;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;"
        id="text2144"
        xml:space="preserve"><tspan
          x="142.57488"
@@ -1384,7 +1384,7 @@
     <text
        xml:space="preserve"
        id="text2924"
-       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2918);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2918);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;"
        transform="matrix(0.83241783,0,0,0.83241783,-44.945834,29.813293)"><tspan
          x="57.916228"
          y="-30.082702"><tspan
@@ -1392,7 +1392,7 @@
     <text
        xml:space="preserve"
        id="text2928"
-       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2918);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect2918);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;"
        transform="matrix(0.83241783,0,0,0.83241783,54.141678,30.02401)"><tspan
          x="60.698943"
          y="-30.082702"><tspan
@@ -1421,7 +1421,7 @@
        transform="matrix(0.55068035,0,0,0.55068035,-2.1098509,9.8568533)"
        y="0"
        x="-21.537733"
-       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect2973);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect2973);fill:#000000;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;"
        id="text2971"
        xml:space="preserve"><tspan
          x="108.41992"
@@ -1449,6 +1449,9 @@
          y="44.701363"><tspan>fragmentation
 </tspan></tspan><tspan
          x="108.41992"
-         y="51.756913"><tspan>sequencing</tspan></tspan></text>
+         y="51.756913"><tspan>adapter ligation
+</tspan></tspan><tspan
+         x="108.41992"
+         y="58.812463"><tspan>sequencing</tspan></tspan></text>
   </g>
 </svg>

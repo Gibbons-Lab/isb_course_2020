@@ -45,7 +45,7 @@ Tries to predict what the microbiome *does* from sequencing data.
 
 Uses gene/transcript/protein/metabolite abundances (metagenomics, metatranscriptomics, proteomics or metabolomics).
 
-Yields metabolic *capacity* or *potential*.
+Gene content yields metabolic *capacity* or *potential*.
 
 ---
 
