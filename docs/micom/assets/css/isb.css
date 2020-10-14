@@ -15,8 +15,8 @@ body {
 
 .reveal {
   font-family: Barlow, "Open Sans", Arial, sans-serif;
-  font-size: 28px;
   font-weight: normal;
+  font-size: 28px;
   color: rgba(0, 0, 0, 0.85); }
 
 ::selection {
@@ -383,12 +383,14 @@ section.has-dark-background, section.dark {
   --accent-lighter: #ffbf99;
   --gray: #949494; }
 
-.reveal .slides {
+.reveal .slides section {
   margin-left: 4vw;
-  margin-right: 10vw; }
+  width: calc(100% - 6vw); }
 
 .reveal .slides .pdf-page section {
-  left: 6vw !important; }
+  left: 6vw !important;
+  padding-right: 8vw !important;
+}
 
 @media screen and (max-width: 1024px) {
   .reveal .sidebar {
