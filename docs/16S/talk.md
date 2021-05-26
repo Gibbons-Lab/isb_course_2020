@@ -108,8 +108,8 @@ Major changes:
 
 ## Where to find help?
 
-QIIME 2 comes with a lot of help, including a wide range of [tutorials](https://docs.qiime2.org/2020.8/tutorials/),
-[general documentation](https://docs.qiime2.org/2020.8/) and a
+QIIME 2 comes with a lot of help, including a wide range of [tutorials](https://docs.qiime2.org/2021.4/tutorials/),
+[general documentation](https://docs.qiime2.org/2021.4/) and a
 [user forum](https://forum.qiime2.org/) where you can ask questions.
 
 ---
@@ -123,7 +123,7 @@ into *actions* to either produce other artifacts or *visualizations*.
 
 <div class="footnote">
 
-https://docs.qiime2.org/2020.8/tutorials/overview/
+https://docs.qiime2.org/2021.4/tutorials/overview/
 
 </div>
 
