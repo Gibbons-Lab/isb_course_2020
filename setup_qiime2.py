@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
         run_and_check(
             ["conda", "env", "update", "-n", "base", "--file",
-             "qiime2-2020.8-py36-linux-conda.yml"],
+             "qiime2-2021.4-py38-linux-conda.yml"],
             "To activate this environment, use",
             ":mag: Installing Qiime 2. This may take a little bit.\n :clock1:",
             "could not install Qiime 2 :sob:",
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     else:
         con.log(":mag: Qiime 2 is already installed. Skipped.")
 
-    sys.path.append("/usr/local/lib/python3.6/site-packages")
+    sys.path.append("/usr/local/lib/python3.8/site-packages")
     con.log(":mag: Fixed import paths to include Qiime 2.")
 
     run_and_check(
