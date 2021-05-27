@@ -101,9 +101,6 @@ if __name__ == "__main__":
     else:
         con.log(":mag: Qiime 2 is already installed. Skipped.")
 
-    sys.path.append("/usr/local/lib/python3.8/site-packages")
-    con.log(":mag: Fixed import paths to include Qiime 2.")
-
     run_and_check(
         ["qiime", "info"],
         "QIIME 2 release:",
@@ -113,6 +110,9 @@ if __name__ == "__main__":
     )
 
     if sys.version_info[0:2] == (3, 8):
+        sys.path.append("/usr/local/lib/python3.8/site-packages")
+        con.log(":mag: Fixed import paths to include Qiime 2.")
+
         con.log(":bar_chart: Checking if Qiime 2 import works...")
         try:
             import qiime2  # noqa
