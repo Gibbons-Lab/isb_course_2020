@@ -20,7 +20,7 @@ MINICONDA_PATH = (
     "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 )
 QIIME_YAML_URL = (
-    "https://data.qiime2.org/distro/core/qiime2-2020.8-py36-linux-conda.yml"
+    "https://data.qiime2.org/distro/core/qiime2-2021.4-py38-linux-conda.yml"
 )
 QIIME_YAML = os.path.basename(QIIME_YAML_URL)
 
@@ -47,6 +47,18 @@ def run_and_check(args, check, message, failure, success, console=con):
         console.log("[red]%s[/red]" % failure, out)
         cleanup()
         sys.exit(1)
+
+
+def _hack_in_the_plugins():
+    """Add the plugins to QIIME."""
+    import qiime2.sdk as sdk
+    from importlib.metadata import entry_points
+
+    pm = sdk.PluginManager(add_plugins=False)
+    for entry in entry_points()["qiime2.plugins"]:
+        plugin = entry.load()
+        package = entry.value.split(':')[0].split('.')[0]
+        pm.add_plugin(plugin, package, entry.name)
 
 
 if __name__ == "__main__":
@@ -107,6 +119,15 @@ if __name__ == "__main__":
         con.log("[red]Qiime 2 can not be imported :sob:[/red]")
         sys.exit(1)
     con.log("[blue]:bar_chart: Qiime 2 can be imported :tada:[/blue]")
+
+    con.log(":bar_chart: Setting up QIIME 2 plugins...")
+    try:
+        _hack_in_the_plugins()
+        from qiime2.plugins import feature_table # noqa
+    except Exception:
+        con.log("[red]Could not add the plugins :sob:[/red]")
+        sys.exit(1)
+    con.log("[blue]:bar_chart: Plugins are working :tada:[/blue]")
 
     cleanup()
 
