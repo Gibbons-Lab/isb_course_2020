@@ -112,22 +112,23 @@ if __name__ == "__main__":
         ":bar_chart: Qiime 2 command line looks good :tada:"
     )
 
-    con.log(":bar_chart: Checking if Qiime 2 import works...")
-    try:
-        import qiime2  # noqa
-    except Exception:
-        con.log("[red]Qiime 2 can not be imported :sob:[/red]")
-        sys.exit(1)
-    con.log("[blue]:bar_chart: Qiime 2 can be imported :tada:[/blue]")
+    if sys.version_info[0:2] == (3, 8):
+        con.log(":bar_chart: Checking if Qiime 2 import works...")
+        try:
+            import qiime2  # noqa
+        except Exception:
+            con.log("[red]Qiime 2 can not be imported :sob:[/red]")
+            sys.exit(1)
+        con.log("[blue]:bar_chart: Qiime 2 can be imported :tada:[/blue]")
 
-    con.log(":bar_chart: Setting up QIIME 2 plugins...")
-    try:
-        _hack_in_the_plugins()
-        from qiime2.plugins import feature_table # noqa
-    except Exception:
-        con.log("[red]Could not add the plugins :sob:[/red]")
-        sys.exit(1)
-    con.log("[blue]:bar_chart: Plugins are working :tada:[/blue]")
+        con.log(":bar_chart: Setting up QIIME 2 plugins...")
+        try:
+            _hack_in_the_plugins()
+            from qiime2.plugins import feature_table # noqa
+        except Exception:
+            con.log("[red]Could not add the plugins :sob:[/red]")
+            sys.exit(1)
+        con.log("[blue]:bar_chart: Plugins are working :tada:[/blue]")
 
     cleanup()
 
