@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="232.22856"
    inkscape:export-xdpi="232.22856"
    inkscape:export-filename="/home/cdiener/teaching/isb_course_2020/docs/micom/assets/ctFBA.png"
    sodipodi:docname="ctfba.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    id="svg2905"
    version="1.1"
    viewBox="0 0 210 120"
    height="120mm"
-   width="210mm">
+   width="210mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2899">
     <rect
@@ -315,7 +315,7 @@
      inkscape:window-maximized="1"
      inkscape:window-y="28"
      inkscape:window-x="0"
-     inkscape:window-height="1020"
+     inkscape:window-height="1144"
      inkscape:window-width="1920"
      inkscape:snap-global="true"
      inkscape:snap-bbox="true"
@@ -323,15 +323,16 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="g6416"
      inkscape:document-units="mm"
-     inkscape:cy="232.36567"
-     inkscape:cx="406.69413"
+     inkscape:cy="232.00551"
+     inkscape:cx="406.77618"
      inkscape:zoom="0.97842505"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base">
+     id="base"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        id="grid4028"
        type="xygrid" />
@@ -344,7 +345,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -514,8 +515,8 @@
              style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4080);fill:#283593;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
              transform="matrix(0.81910923,0,0,0.81910923,3.6354772,-1.135568)"><tspan
                x="69.798895"
-               y="140.18683"><tspan
-                 style="fill:#283593">growth cone</tspan></tspan></text>
+               y="140.18683"
+               id="tspan13728">growth cone</tspan></text>
           <path
              style="fill:none;stroke:#d40000;stroke-width:0.960559;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              d="M 59.071417,82.973504 99.735073,119.0625"
@@ -527,8 +528,8 @@
              style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4088);fill:#d40000;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
              transform="matrix(0.83852699,0,0,0.83852699,8.7033157,8.7661902)"><tspan
                x="84.634616"
-               y="104.46808"><tspan
-                 style="fill:#d40000;stroke:none">optimal</tspan></tspan></text>
+               y="104.46808"
+               id="tspan13730">optimal</tspan></text>
         </g>
       </g>
       <g
@@ -599,11 +600,11 @@
         <text
            xml:space="preserve"
            id="text4086-2"
-           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4088-6);fill:#d40000;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
+           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4088-6);fill:#d40000;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
            transform="matrix(0.67483925,0,0,0.67483925,79.126937,25.911718)"><tspan
              x="84.634616"
-             y="104.46808"><tspan
-               style="fill:#d40000;stroke:none">optimal</tspan></tspan></text>
+             y="104.46808"
+             id="tspan13732">optimal</tspan></text>
         <path
            id="path4680"
            d="M 135.69509,97.783661 119.90495,113.5738"
@@ -616,12 +617,12 @@
            style="fill:#ff8a65;stroke:#bf360c;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
         <text
            transform="matrix(0.76732999,0,0,0.76732999,0.62923443,31.405672)"
-           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4684);fill:#ffffff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.5, 0.50000000000000000;stroke-dashoffset:0"
+           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4684);fill:#ffffff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.5, 0.5;stroke-dashoffset:0"
            id="text4682"
            xml:space="preserve"><tspan
              x="169.63656"
-             y="104.63995"><tspan
-               style="fill:#ffffff;stroke:none">L2</tspan></tspan></text>
+             y="104.63995"
+             id="tspan13734">L2</tspan></text>
       </g>
       <flowRoot
          transform="matrix(0.437899,0,0,0.437899,121.43018,43.162168)"
@@ -709,11 +710,11 @@
         <text
            xml:space="preserve"
            id="text4682-3"
-           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4684-6);fill:#ffffff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.5, 0.50000000000000000;stroke-dashoffset:0;"
+           style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect4684-6);fill:#ffffff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1.5, 0.5;stroke-dashoffset:0"
            transform="matrix(0.76732998,0,0,0.76732998,53.429041,30.93552)"><tspan
              x="169.63656"
-             y="104.63995"><tspan
-               style="fill:#ffffff;stroke:none">L2</tspan></tspan></text>
+             y="104.63995"
+             id="tspan13736">L2</tspan></text>
         <path
            style="fill:none;stroke:#d40000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0;stroke-opacity:1"
            d="M 175.00958,91.165573 198.4888,113.06926"
@@ -746,19 +747,19 @@
       <text
          xml:space="preserve"
          id="text5270"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="matrix(0.98330764,0,0,0.98330764,-44.77639,-35.039797)"><tspan
            x="81.614991"
-           y="80.513001"><tspan
-             style="fill:#2979ff;stroke:none">?</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13738">?</tspan></text>
       <text
          transform="matrix(0.98330766,0,0,0.98330766,-28.91038,-35.336683)"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          id="text5270-2"
          xml:space="preserve"><tspan
            x="81.614991"
-           y="80.513001"><tspan
-             style="fill:#ff7043;stroke:none">?</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13740">?</tspan></text>
       <g
          transform="matrix(-1.4501115,0,0,1.4501115,124.24879,-42.523855)"
          id="g3415-2-4"
@@ -864,18 +865,20 @@
    id="flowSpan1023-6">c</flowSpan> = 1</flowPara></flowRoot>
       <text
          transform="matrix(0.6735763,0,0,0.6735763,47.450811,-10.133401)"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-54);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-54);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          id="text5270-6"
          xml:space="preserve"><tspan
            x="78.938116"
-           y="80.513001"><tspan>0.5</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13742">1.0</tspan></text>
       <text
          xml:space="preserve"
          id="text5270-2-4"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5-7);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5-7);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="matrix(0.6735763,0,0,0.6735763,62.364867,-10.295997)"><tspan
            x="78.938116"
-           y="80.513001"><tspan>0.5</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13744">1.0</tspan></text>
       <g
          style="white-space:pre;stroke:#1e88e5;stroke-linecap:butt;stroke-linejoin:round"
          id="g3415-2-4-0"
@@ -965,95 +968,96 @@
       <text
          xml:space="preserve"
          id="text5270-6-0"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-54-9);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-54-9);fill:#2979ff;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="matrix(0.67357628,0,0,0.67357628,108.8741,-10.610577)"><tspan
            x="78.938116"
-           y="80.513001"><tspan>0.4</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13746">0.8</tspan></text>
       <text
          transform="matrix(0.67357628,0,0,0.67357628,123.78816,-10.773172)"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5-7-5);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect5272-5-7-5);fill:#ff7043;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          id="text5270-2-4-9"
          xml:space="preserve"><tspan
            x="78.938116"
-           y="80.513001"><tspan>0.4</tspan></tspan></text>
+           y="80.513001"
+           id="tspan13748">0.8</tspan></text>
       <text
          xml:space="preserve"
          id="text6007"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="matrix(1.2574337,0,0,1.2574337,-71.74043,-41.982018)"><tspan
            x="71.426552"
-           y="116.37433"><tspan
-             style="fill:#000000">FBA</tspan></tspan></text>
+           y="116.37433"
+           id="tspan13750">FBA</tspan></text>
       <text
          transform="matrix(1.2574337,0,0,1.2574337,2.3429034,-41.452863)"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009-1);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009-1);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          id="text6007-7"
          xml:space="preserve"><tspan
            x="62.100546"
-           y="116.37433"><tspan>cooperative</tspan></tspan></text>
+           y="116.37433"
+           id="tspan13752">cooperative</tspan></text>
       <text
          xml:space="preserve"
          id="text6007-7-1"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009-1-7);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6009-1-7);fill:#000000;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="matrix(1.2574337,0,0,1.2574337,125.87507,-41.54707)"><tspan
            x="19.189413"
-           y="116.37433"><tspan>cooperative </tspan></tspan><tspan
+           y="116.37433"
+           id="tspan13754">cooperative </tspan><tspan
            x="23.881344"
-           y="123.42988"><tspan>tradeoff</tspan></tspan></text>
+           y="123.42988"
+           id="tspan13756">tradeoff</tspan></text>
       <text
          xml:space="preserve"
          id="text6090"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6092);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;white-space:pre;shape-inside:url(#rect6092);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="translate(-1.2036027,3.9783943)"><tspan
            x="14.875293"
-           y="121.66534"><tspan
-             style="fill:#616161">maximize </tspan><tspan
-             style="fill:#616161">μ</tspan><tspan
-             style="font-size:65%;baseline-shift:sub;fill:#616161">c</tspan><tspan
-             style="fill:#616161">  </tspan></tspan></text>
+           y="121.66534"
+           id="tspan13760">maximize μ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13758">c</tspan>  </tspan></text>
       <text
          transform="translate(74.360409,4.867574)"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect6092-1);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect6092-1);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          id="text6090-5"
          xml:space="preserve"
          x="-6.824136e-07"
          y="0"><tspan
            x="7.9375"
-           y="121.66534"><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">minimize </tspan><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">Σμ</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:sub;text-anchor:start;fill:#616161">i</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:super;text-anchor:start;fill:#616161">2
+           y="121.66534"
+           id="tspan13766">minimize Σμ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13762">i</tspan><tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan13764">2
 </tspan></tspan><tspan
            x="7.9375"
-           y="128.72089"><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">s.t. </tspan><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">μ</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:sub;text-anchor:start;fill:#616161">c</tspan><tspan
-             style="text-align:start;text-anchor:start;fill:#616161"> = max </tspan><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">μ</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:sub;text-anchor:start;fill:#616161">c</tspan></tspan></text>
+           y="128.72089"
+           id="tspan13772">s.t. μ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13768">c</tspan> = max μ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13770">c</tspan></tspan></text>
       <text
          y="0"
          x="-6.824136e-07"
          xml:space="preserve"
          id="text6090-5-7"
-         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect6092-1-9);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.50000000000000000;stroke-dashoffset:0;"
+         style="font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;white-space:pre;shape-inside:url(#rect6092-1-9);fill:#616161;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:1, 0.5;stroke-dashoffset:0"
          transform="translate(143.645,4.8317438)"><tspan
            x="7.9375"
-           y="121.66534"><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">minimize </tspan><tspan
-             style="text-align:start;text-anchor:start;fill:#616161">Σμ</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:sub;text-anchor:start;fill:#616161">i</tspan><tspan
-             style="font-size:65%;text-align:start;baseline-shift:super;text-anchor:start;fill:#616161">2
+           y="121.66534"
+           id="tspan13778">minimize Σμ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13774">i</tspan><tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan13776">2
 </tspan></tspan><tspan
            x="7.9375"
-           y="128.72089"><tspan
-             style="fill:#616161">s.t. ≥ </tspan><tspan
-             style="fill:#616161">α · </tspan><tspan
-             style="fill:#616161">max </tspan><tspan
-             style="fill:#616161">μ</tspan><tspan
-             style="fill:#616161">c</tspan></tspan></text>
+           y="128.72089"
+           id="tspan13780">s.t. ≥ α · max μc</tspan></text>
     </g>
   </g>
 </svg>
